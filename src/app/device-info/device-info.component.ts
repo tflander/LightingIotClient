@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceInfo} from '../device-info';
+import { DEVICES } from '../MockDevices';
 
 @Component({
   selector: 'app-device-info',
@@ -8,12 +9,7 @@ import { DeviceInfo} from '../device-info';
 })
 export class DeviceInfoComponent implements OnInit {
 
-  deviceInfo: DeviceInfo = {
-    MacAddress: 'stub mac address',
-    IP: 'stub IP',
-    Program: 'stub program',
-    ProgramVersion: 'stub program version'
-  };
+  mockDevices = DEVICES;
 
   constructor() { }
   ngOnInit(): void {
