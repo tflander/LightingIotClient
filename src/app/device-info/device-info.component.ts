@@ -14,8 +14,10 @@ export class DeviceInfoComponent implements OnInit {
   devices: DeviceInfo[] = [];
 
   getDevices(): void {
-    this.devices = this.deviceInfoService.getDeviceInfo();
+    this.deviceInfoService.getDeviceInfo()
+      .subscribe(devices => this.devices = devices);
   }
+
   constructor(private deviceInfoService: DeviceInfoService) { }
   ngOnInit(): void {
     this.getDevices();
