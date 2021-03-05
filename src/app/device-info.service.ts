@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class DeviceInfoService {
 
-  private deviceUrl = 'http://192.168.0.5/info';
+  private deviceUrl = '/api/info';
 
   constructor(
     private messageService: MessageService,
