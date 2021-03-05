@@ -1,8 +1,9 @@
 <h2>My Devices</h2>
 <div class="devices">
-  <div *ngFor="let deviceInfo of mockDevices">
+  <div *ngFor="let deviceInfo of devices">
     <h3>{{deviceInfo.MacAddress}} Details</h3>
     <div><span>IP: </span>{{deviceInfo.IP}}</div>
     <div><span>Program: </span>{{deviceInfo.Program}}</div>
-    <div><span>Program Version: </span>{{deviceInfo.ProgramVersion}}</div>  </div>
+    <div><span>Program Version: </span>{{deviceInfo.ProgramVersion}}</div>
+  </div>
 </div>
