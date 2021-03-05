@@ -11,16 +11,31 @@ import { DeviceInfoService} from '../device-info.service';
 
 export class DeviceInfoComponent implements OnInit {
 
-  devices: DeviceInfo[] = [];
+  // TODO: want to handle a list of devices
+  // devices: DeviceInfo[] = [];
+  device: DeviceInfo = {
+    MacAddress: '',
+    IP: '',
+    Program: '',
+    ProgramVersion: '',
+  };
 
+  /*
   getDevices(): void {
     this.deviceInfoService.getDeviceInfo()
       .subscribe(devices => this.devices = devices);
   }
+   */
+
+  getDevice(): void {
+    this.deviceInfoService.getDeviceInfo()
+      .subscribe(device => this.device = device);
+  }
 
   constructor(private deviceInfoService: DeviceInfoService) { }
   ngOnInit(): void {
-    this.getDevices();
+    // this.getDevices();
+    this.getDevice();
   }
 
 }

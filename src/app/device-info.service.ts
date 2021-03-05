@@ -17,9 +17,10 @@ export class DeviceInfoService {
     private http: HttpClient,
   ) { }
 
-  getDeviceInfo(): Observable<DeviceInfo[]> {
+  // TODO: handle multiple devices, e.g. Observable<DeviceInfo[]>
+  getDeviceInfo(): Observable<DeviceInfo> {
     // const observable = of(DEVICES);
-    const observable = this.http.get<DeviceInfo[]>(this.deviceUrl);
+    const observable = this.http.get<DeviceInfo>(this.deviceUrl);
     this.messageService.add('DeviceInfoService: fetched devices');
     console.log(observable);
     return observable;

@@ -1,9 +1,17 @@
 <h2>My Devices</h2>
 <div class="devices">
+  <!--
   <div *ngFor="let deviceInfo of devices">
     <h3>{{deviceInfo.MacAddress}} Details</h3>
     <div><span>IP: </span>{{deviceInfo.IP}}</div>
     <div><span>Program: </span>{{deviceInfo.Program}}</div>
     <div><span>Program Version: </span>{{deviceInfo.ProgramVersion}}</div>
   </div>
+  -->
+
+  <h3>{{device.MacAddress}} Details</h3>
+  <div><span>IP: </span>{{device.IP}}</div>
+  <div><span>Program: </span>{{device.Program}}</div>
+  <div><span>Program Version: </span>{{device.ProgramVersion}}</div>
+
 </div>
