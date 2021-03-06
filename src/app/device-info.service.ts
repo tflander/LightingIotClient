@@ -11,7 +11,13 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class DeviceInfoService {
 
-  private deviceUrl = '/api5/info';
+  // TODO: find a better way
+  private deviceUrls = [
+    '/api5/info',
+    '/api6/info',
+    '/api7/info',
+    '/api8/info',
+  ];
 
   constructor(
     private messageService: MessageService,
@@ -19,16 +25,18 @@ export class DeviceInfoService {
   ) { }
 
   // TODO: handle multiple devices, e.g. Observable<DeviceInfo[]>
-  getDeviceInfo(): Observable<DeviceInfo> {
+  getDeviceInfo(): Observable<DeviceInfo>[] {
 
     // Return mocks
     // return of(DEVICES);
 
-    return this.http.get<DeviceInfo>(this.deviceUrl)
-      .pipe(
-        tap(_ => this.log('fetched heroes')),
-        catchError(this.handleError<DeviceInfo>('getHeroes', undefined))
-      );
+    // return this.http.get<DeviceInfo>(this.deviceUrl)
+    //   .pipe(
+    //     tap(_ => this.log('fetched heroes')),
+    //     catchError(this.handleError<DeviceInfo>('getHeroes', undefined))
+    //   );
+
+    return [];
   }
 
   // tslint:disable-next-line:typedef

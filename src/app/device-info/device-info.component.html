@@ -9,11 +9,12 @@
   </div>
   -->
 
-  <div *ngIf="device">
-    <h3>{{device.MacAddress}} Details</h3>
-    <div><span>IP: </span>{{device.IP}}</div>
-    <div><span>Program: </span>{{device.Program}}</div>
-    <div><span>Program Version: </span>{{device.ProgramVersion}}</div>
+  <div *ngFor="let device of devices">
+    <div *ngIf="device">
+      <h3>{{device.MacAddress}} Details</h3>
+      <div><span>IP: </span>{{device.IP}}</div>
+      <div><span>Program: </span>{{device.Program}}</div>
+      <div><span>Program Version: </span>{{device.ProgramVersion}}</div>
+    </div>
   </div>
-
 </div>
