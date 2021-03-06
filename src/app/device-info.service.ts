@@ -30,15 +30,14 @@ export class DeviceInfoService {
     this.deviceUrls.forEach(url => devices$.push(
       this.http.get<DeviceInfo>(url)
         .pipe(
-          tap(_ => this.log(`trying device at url ${url}`)),
+          tap(_ => this.log(`found device at url ${url}`)),
           catchError(this.handleError<DeviceInfo>('getDeviceInfo', undefined))
     )));
 
     return devices$;
   }
 
-  // tslint:disable-next-line:typedef
-  private handleError<T>(operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T): (error: any) => Observable<T> {
     return (error: any): Observable<T> => {
       this.log(`${operation} failed: ${error.message}`);
       return of(result as T);
@@ -46,6 +45,6 @@ export class DeviceInfoService {
   }
 
   private log(message: string): void {
-    this.messageService.add(`HeroService: ${message}`);
+    this.messageService.add(`DeviceInfoService: ${message}`);
   }
 }

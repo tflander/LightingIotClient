@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceInfo} from '../device-info';
-import { DEVICES } from '../MockDevices';
 import { DeviceInfoService} from '../device-info.service';
+import { MessageService} from '../message.service';
 
 @Component({
   selector: 'app-device-info',
@@ -12,45 +12,22 @@ import { DeviceInfoService} from '../device-info.service';
 export class DeviceInfoComponent implements OnInit {
 
   devices: DeviceInfo[] = [];
-  // device: DeviceInfo = {
-  //   MacAddress: '',
-  //   IP: '',
-  //   Program: '',
-  //   ProgramVersion: '',
-  // };
-
-  /*
-  getDevices(): void {
-    this.deviceInfoService.getDeviceInfo()
-      .subscribe(devices => this.devices = devices);
-  }
-   */
 
   getDevices(): void {
 
     const devices$ = this.deviceInfoService.getDeviceInfo();
     console.log(devices$);
-    devices$.forEach(deviceInfo$ => deviceInfo$.subscribe(x => {
-      console.log(x);
-      this.devices.push(x);
+    devices$.forEach(deviceInfo$ => deviceInfo$.subscribe((device: DeviceInfo) => {
+      this.devices.push(device);
     }));
-
-    // this.deviceInfoService.getDeviceInfo()
-    //   .subscribe(devices => this.devices = devices);
   }
 
-  /*
-  getDevice(): void {
-    this.deviceInfoService.getDeviceInfo()
-      .subscribe(device => this.device = device);
-  }
-  */
-
-
-  constructor(private deviceInfoService: DeviceInfoService) { }
+  constructor(
+    private deviceInfoService: DeviceInfoService,
+    private messageService: MessageService
+  ) { }
   ngOnInit(): void {
     this.getDevices();
-    // this.getDevice();
   }
 
 }
