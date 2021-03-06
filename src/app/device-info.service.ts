@@ -24,37 +24,28 @@ export class DeviceInfoService {
     private http: HttpClient,
   ) { }
 
-  // TODO: handle multiple devices, e.g. Observable<DeviceInfo[]>
   getDeviceInfo(): Observable<DeviceInfo>[] {
 
-    // Return mocks
-    // return of(DEVICES);
+    const devices$: Observable<DeviceInfo>[] = [];
+    this.deviceUrls.forEach(url => devices$.push(
+      this.http.get<DeviceInfo>(url)
+        .pipe(
+          tap(_ => this.log(`trying device at url ${url}`)),
+          catchError(this.handleError<DeviceInfo>('getDeviceInfo', undefined))
+    )));
 
-    // return this.http.get<DeviceInfo>(this.deviceUrl)
-    //   .pipe(
-    //     tap(_ => this.log('fetched heroes')),
-    //     catchError(this.handleError<DeviceInfo>('getHeroes', undefined))
-    //   );
-
-    return [];
+    return devices$;
   }
 
   // tslint:disable-next-line:typedef
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-
-      // TODO: send the error to remote logging infrastructure
-      // console.error(error); // log to console instead
-
-      // TODO: better job of transforming error for user consumption
       this.log(`${operation} failed: ${error.message}`);
-
-      // Let the app keep running by returning an empty result.
       return of(result as T);
     };
   }
 
-  private log(message: string) {
+  private log(message: string): void {
     this.messageService.add(`HeroService: ${message}`);
   }
 }
