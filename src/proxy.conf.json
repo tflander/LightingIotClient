@@ -1,9 +1,30 @@
 {
-  "/api": {
+  "/api5": {
     "target": "http://192.168.0.5",
     "secure": false,
     "pathRewrite": {
-      "^/api": ""
+      "^/api5": ""
+    }
+  },
+  "/api6": {
+    "target": "http://192.168.0.6",
+    "secure": false,
+    "pathRewrite": {
+      "^/api6": ""
+    }
+  },
+  "/api7": {
+    "target": "http://192.168.0.7",
+    "secure": false,
+    "pathRewrite": {
+      "^/api7": ""
+    }
+  },
+  "/api8": {
+    "target": "http://192.168.0.8",
+    "secure": false,
+    "pathRewrite": {
+      "^/api8": ""
     }
   }
 }
