@@ -1,19 +1,35 @@
 $font-stack:    Helvetica, sans-serif
 $darkBlue: #000030
 $subtleYellow: #C0C00C
-$antiqueWhite: #faebd7
-$midnightBlue: #191970
 
 $mainBackground: $darkBlue
 $mainColor: $subtleYellow
-$headerColor: $antiqueWhite
-$headerBackground: $midnightBlue
+$headerColor: antiquewhite
+$headerBackground: midnightblue
+$labelColor: antiquewhite
 
 body
   background-color: $mainBackground
-  color: $subtleYellow
+  color: $mainColor
   font-family: $font-stack
+  margin-left: 15%
+  margin-right: 15%
+  margin-top: 2em
+
+h1
+  color: midnightblue
+  background-color: cornflowerblue
+  margin: 0
+  padding: 1em
 
 h2
   color: $headerColor
-  background-color: $midnightBlue
+  background-color: $headerBackground
+  margin: 0
+  padding: 0.5em
+
+h3
+  color: $headerColor
+
+.itemLabel
+  color: $labelColor
