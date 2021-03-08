@@ -11,18 +11,17 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class DeviceInfoService {
 
-  // TODO: find a better way
-  private deviceUrls = [
-    '/api5/info',
-    '/api6/info',
-    '/api7/info',
-    '/api8/info',
-  ];
+  private deviceUrls: string[];
 
   constructor(
     private messageService: MessageService,
     private http: HttpClient,
-  ) { }
+  ) {
+    this.deviceUrls = [];
+    for (let i = 5; i <= 8; i++) {
+      this.deviceUrls.push(`/api${i}/info`);
+    }
+  }
 
   getDeviceInfo(): Observable<DeviceInfo>[] {
 
