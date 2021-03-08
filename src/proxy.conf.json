@@ -1,515 +1,515 @@
 {
 
   "/device0": {
-    "target": "http://192.168.0.0",  "secure": false,  "pathRewrite": {    "^/device0": ""  }},
+    "target": "http://192.168.0.0",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device0": ""  }},
   "/device1": {
-    "target": "http://192.168.0.1",  "secure": false,  "pathRewrite": {    "^/device1": ""  }},
+    "target": "http://192.168.0.1",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device1": ""  }},
   "/device2": {
-    "target": "http://192.168.0.2",  "secure": false,  "pathRewrite": {    "^/device2": ""  }},
+    "target": "http://192.168.0.2",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device2": ""  }},
   "/device3": {
-    "target": "http://192.168.0.3",  "secure": false,  "pathRewrite": {    "^/device3": ""  }},
+    "target": "http://192.168.0.3",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device3": ""  }},
   "/device4": {
-    "target": "http://192.168.0.4",  "secure": false,  "pathRewrite": {    "^/device4": ""  }},
+    "target": "http://192.168.0.4",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device4": ""  }},
   "/device5": {
-    "target": "http://192.168.0.5",  "secure": false,  "pathRewrite": {    "^/device5": ""  }},
+    "target": "http://192.168.0.5",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device5": ""  }},
   "/device6": {
-    "target": "http://192.168.0.6",  "secure": false,  "pathRewrite": {    "^/device6": ""  }},
+    "target": "http://192.168.0.6",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device6": ""  }},
   "/device7": {
-    "target": "http://192.168.0.7",  "secure": false,  "pathRewrite": {    "^/device7": ""  }},
+    "target": "http://192.168.0.7",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device7": ""  }},
   "/device8": {
-    "target": "http://192.168.0.8",  "secure": false,  "pathRewrite": {    "^/device8": ""  }},
+    "target": "http://192.168.0.8",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device8": ""  }},
   "/device9": {
-    "target": "http://192.168.0.9",  "secure": false,  "pathRewrite": {    "^/device9": ""  }},
+    "target": "http://192.168.0.9",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device9": ""  }},
   "/device10": {
-    "target": "http://192.168.0.10",  "secure": false,  "pathRewrite": {    "^/device10": ""  }},
+    "target": "http://192.168.0.10",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device10": ""  }},
   "/device11": {
-    "target": "http://192.168.0.11",  "secure": false,  "pathRewrite": {    "^/device11": ""  }},
+    "target": "http://192.168.0.11",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device11": ""  }},
   "/device12": {
-    "target": "http://192.168.0.12",  "secure": false,  "pathRewrite": {    "^/device12": ""  }},
+    "target": "http://192.168.0.12",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device12": ""  }},
   "/device13": {
-    "target": "http://192.168.0.13",  "secure": false,  "pathRewrite": {    "^/device13": ""  }},
+    "target": "http://192.168.0.13",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device13": ""  }},
   "/device14": {
-    "target": "http://192.168.0.14",  "secure": false,  "pathRewrite": {    "^/device14": ""  }},
+    "target": "http://192.168.0.14",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device14": ""  }},
   "/device15": {
-    "target": "http://192.168.0.15",  "secure": false,  "pathRewrite": {    "^/device15": ""  }},
+    "target": "http://192.168.0.15",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device15": ""  }},
   "/device16": {
-    "target": "http://192.168.0.16",  "secure": false,  "pathRewrite": {    "^/device16": ""  }},
+    "target": "http://192.168.0.16",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device16": ""  }},
   "/device17": {
-    "target": "http://192.168.0.17",  "secure": false,  "pathRewrite": {    "^/device17": ""  }},
+    "target": "http://192.168.0.17",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device17": ""  }},
   "/device18": {
-    "target": "http://192.168.0.18",  "secure": false,  "pathRewrite": {    "^/device18": ""  }},
+    "target": "http://192.168.0.18",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device18": ""  }},
   "/device19": {
-    "target": "http://192.168.0.19",  "secure": false,  "pathRewrite": {    "^/device19": ""  }},
+    "target": "http://192.168.0.19",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device19": ""  }},
   "/device20": {
-    "target": "http://192.168.0.20",  "secure": false,  "pathRewrite": {    "^/device20": ""  }},
+    "target": "http://192.168.0.20",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device20": ""  }},
   "/device21": {
-    "target": "http://192.168.0.21",  "secure": false,  "pathRewrite": {    "^/device21": ""  }},
+    "target": "http://192.168.0.21",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device21": ""  }},
   "/device22": {
-    "target": "http://192.168.0.22",  "secure": false,  "pathRewrite": {    "^/device22": ""  }},
+    "target": "http://192.168.0.22",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device22": ""  }},
   "/device23": {
-    "target": "http://192.168.0.23",  "secure": false,  "pathRewrite": {    "^/device23": ""  }},
+    "target": "http://192.168.0.23",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device23": ""  }},
   "/device24": {
-    "target": "http://192.168.0.24",  "secure": false,  "pathRewrite": {    "^/device24": ""  }},
+    "target": "http://192.168.0.24",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device24": ""  }},
   "/device25": {
-    "target": "http://192.168.0.25",  "secure": false,  "pathRewrite": {    "^/device25": ""  }},
+    "target": "http://192.168.0.25",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device25": ""  }},
   "/device26": {
-    "target": "http://192.168.0.26",  "secure": false,  "pathRewrite": {    "^/device26": ""  }},
+    "target": "http://192.168.0.26",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device26": ""  }},
   "/device27": {
-    "target": "http://192.168.0.27",  "secure": false,  "pathRewrite": {    "^/device27": ""  }},
+    "target": "http://192.168.0.27",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device27": ""  }},
   "/device28": {
-    "target": "http://192.168.0.28",  "secure": false,  "pathRewrite": {    "^/device28": ""  }},
+    "target": "http://192.168.0.28",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device28": ""  }},
   "/device29": {
-    "target": "http://192.168.0.29",  "secure": false,  "pathRewrite": {    "^/device29": ""  }},
+    "target": "http://192.168.0.29",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device29": ""  }},
   "/device30": {
-    "target": "http://192.168.0.30",  "secure": false,  "pathRewrite": {    "^/device30": ""  }},
+    "target": "http://192.168.0.30",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device30": ""  }},
   "/device31": {
-    "target": "http://192.168.0.31",  "secure": false,  "pathRewrite": {    "^/device31": ""  }},
+    "target": "http://192.168.0.31",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device31": ""  }},
   "/device32": {
-    "target": "http://192.168.0.32",  "secure": false,  "pathRewrite": {    "^/device32": ""  }},
+    "target": "http://192.168.0.32",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device32": ""  }},
   "/device33": {
-    "target": "http://192.168.0.33",  "secure": false,  "pathRewrite": {    "^/device33": ""  }},
+    "target": "http://192.168.0.33",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device33": ""  }},
   "/device34": {
-    "target": "http://192.168.0.34",  "secure": false,  "pathRewrite": {    "^/device34": ""  }},
+    "target": "http://192.168.0.34",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device34": ""  }},
   "/device35": {
-    "target": "http://192.168.0.35",  "secure": false,  "pathRewrite": {    "^/device35": ""  }},
+    "target": "http://192.168.0.35",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device35": ""  }},
   "/device36": {
-    "target": "http://192.168.0.36",  "secure": false,  "pathRewrite": {    "^/device36": ""  }},
+    "target": "http://192.168.0.36",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device36": ""  }},
   "/device37": {
-    "target": "http://192.168.0.37",  "secure": false,  "pathRewrite": {    "^/device37": ""  }},
+    "target": "http://192.168.0.37",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device37": ""  }},
   "/device38": {
-    "target": "http://192.168.0.38",  "secure": false,  "pathRewrite": {    "^/device38": ""  }},
+    "target": "http://192.168.0.38",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device38": ""  }},
   "/device39": {
-    "target": "http://192.168.0.39",  "secure": false,  "pathRewrite": {    "^/device39": ""  }},
+    "target": "http://192.168.0.39",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device39": ""  }},
   "/device40": {
-    "target": "http://192.168.0.40",  "secure": false,  "pathRewrite": {    "^/device40": ""  }},
+    "target": "http://192.168.0.40",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device40": ""  }},
   "/device41": {
-    "target": "http://192.168.0.41",  "secure": false,  "pathRewrite": {    "^/device41": ""  }},
+    "target": "http://192.168.0.41",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device41": ""  }},
   "/device42": {
-    "target": "http://192.168.0.42",  "secure": false,  "pathRewrite": {    "^/device42": ""  }},
+    "target": "http://192.168.0.42",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device42": ""  }},
   "/device43": {
-    "target": "http://192.168.0.43",  "secure": false,  "pathRewrite": {    "^/device43": ""  }},
+    "target": "http://192.168.0.43",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device43": ""  }},
   "/device44": {
-    "target": "http://192.168.0.44",  "secure": false,  "pathRewrite": {    "^/device44": ""  }},
+    "target": "http://192.168.0.44",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device44": ""  }},
   "/device45": {
-    "target": "http://192.168.0.45",  "secure": false,  "pathRewrite": {    "^/device45": ""  }},
+    "target": "http://192.168.0.45",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device45": ""  }},
   "/device46": {
-    "target": "http://192.168.0.46",  "secure": false,  "pathRewrite": {    "^/device46": ""  }},
+    "target": "http://192.168.0.46",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device46": ""  }},
   "/device47": {
-    "target": "http://192.168.0.47",  "secure": false,  "pathRewrite": {    "^/device47": ""  }},
+    "target": "http://192.168.0.47",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device47": ""  }},
   "/device48": {
-    "target": "http://192.168.0.48",  "secure": false,  "pathRewrite": {    "^/device48": ""  }},
+    "target": "http://192.168.0.48",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device48": ""  }},
   "/device49": {
-    "target": "http://192.168.0.49",  "secure": false,  "pathRewrite": {    "^/device49": ""  }},
+    "target": "http://192.168.0.49",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device49": ""  }},
   "/device50": {
-    "target": "http://192.168.0.50",  "secure": false,  "pathRewrite": {    "^/device50": ""  }},
+    "target": "http://192.168.0.50",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device50": ""  }},
   "/device51": {
-    "target": "http://192.168.0.51",  "secure": false,  "pathRewrite": {    "^/device51": ""  }},
+    "target": "http://192.168.0.51",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device51": ""  }},
   "/device52": {
-    "target": "http://192.168.0.52",  "secure": false,  "pathRewrite": {    "^/device52": ""  }},
+    "target": "http://192.168.0.52",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device52": ""  }},
   "/device53": {
-    "target": "http://192.168.0.53",  "secure": false,  "pathRewrite": {    "^/device53": ""  }},
+    "target": "http://192.168.0.53",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device53": ""  }},
   "/device54": {
-    "target": "http://192.168.0.54",  "secure": false,  "pathRewrite": {    "^/device54": ""  }},
+    "target": "http://192.168.0.54",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device54": ""  }},
   "/device55": {
-    "target": "http://192.168.0.55",  "secure": false,  "pathRewrite": {    "^/device55": ""  }},
+    "target": "http://192.168.0.55",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device55": ""  }},
   "/device56": {
-    "target": "http://192.168.0.56",  "secure": false,  "pathRewrite": {    "^/device56": ""  }},
+    "target": "http://192.168.0.56",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device56": ""  }},
   "/device57": {
-    "target": "http://192.168.0.57",  "secure": false,  "pathRewrite": {    "^/device57": ""  }},
+    "target": "http://192.168.0.57",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device57": ""  }},
   "/device58": {
-    "target": "http://192.168.0.58",  "secure": false,  "pathRewrite": {    "^/device58": ""  }},
+    "target": "http://192.168.0.58",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device58": ""  }},
   "/device59": {
-    "target": "http://192.168.0.59",  "secure": false,  "pathRewrite": {    "^/device59": ""  }},
+    "target": "http://192.168.0.59",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device59": ""  }},
   "/device60": {
-    "target": "http://192.168.0.60",  "secure": false,  "pathRewrite": {    "^/device60": ""  }},
+    "target": "http://192.168.0.60",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device60": ""  }},
   "/device61": {
-    "target": "http://192.168.0.61",  "secure": false,  "pathRewrite": {    "^/device61": ""  }},
+    "target": "http://192.168.0.61",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device61": ""  }},
   "/device62": {
-    "target": "http://192.168.0.62",  "secure": false,  "pathRewrite": {    "^/device62": ""  }},
+    "target": "http://192.168.0.62",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device62": ""  }},
   "/device63": {
-    "target": "http://192.168.0.63",  "secure": false,  "pathRewrite": {    "^/device63": ""  }},
+    "target": "http://192.168.0.63",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device63": ""  }},
   "/device64": {
-    "target": "http://192.168.0.64",  "secure": false,  "pathRewrite": {    "^/device64": ""  }},
+    "target": "http://192.168.0.64",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device64": ""  }},
   "/device65": {
-    "target": "http://192.168.0.65",  "secure": false,  "pathRewrite": {    "^/device65": ""  }},
+    "target": "http://192.168.0.65",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device65": ""  }},
   "/device66": {
-    "target": "http://192.168.0.66",  "secure": false,  "pathRewrite": {    "^/device66": ""  }},
+    "target": "http://192.168.0.66",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device66": ""  }},
   "/device67": {
-    "target": "http://192.168.0.67",  "secure": false,  "pathRewrite": {    "^/device67": ""  }},
+    "target": "http://192.168.0.67",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device67": ""  }},
   "/device68": {
-    "target": "http://192.168.0.68",  "secure": false,  "pathRewrite": {    "^/device68": ""  }},
+    "target": "http://192.168.0.68",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device68": ""  }},
   "/device69": {
-    "target": "http://192.168.0.69",  "secure": false,  "pathRewrite": {    "^/device69": ""  }},
+    "target": "http://192.168.0.69",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device69": ""  }},
   "/device70": {
-    "target": "http://192.168.0.70",  "secure": false,  "pathRewrite": {    "^/device70": ""  }},
+    "target": "http://192.168.0.70",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device70": ""  }},
   "/device71": {
-    "target": "http://192.168.0.71",  "secure": false,  "pathRewrite": {    "^/device71": ""  }},
+    "target": "http://192.168.0.71",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device71": ""  }},
   "/device72": {
-    "target": "http://192.168.0.72",  "secure": false,  "pathRewrite": {    "^/device72": ""  }},
+    "target": "http://192.168.0.72",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device72": ""  }},
   "/device73": {
-    "target": "http://192.168.0.73",  "secure": false,  "pathRewrite": {    "^/device73": ""  }},
+    "target": "http://192.168.0.73",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device73": ""  }},
   "/device74": {
-    "target": "http://192.168.0.74",  "secure": false,  "pathRewrite": {    "^/device74": ""  }},
+    "target": "http://192.168.0.74",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device74": ""  }},
   "/device75": {
-    "target": "http://192.168.0.75",  "secure": false,  "pathRewrite": {    "^/device75": ""  }},
+    "target": "http://192.168.0.75",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device75": ""  }},
   "/device76": {
-    "target": "http://192.168.0.76",  "secure": false,  "pathRewrite": {    "^/device76": ""  }},
+    "target": "http://192.168.0.76",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device76": ""  }},
   "/device77": {
-    "target": "http://192.168.0.77",  "secure": false,  "pathRewrite": {    "^/device77": ""  }},
+    "target": "http://192.168.0.77",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device77": ""  }},
   "/device78": {
-    "target": "http://192.168.0.78",  "secure": false,  "pathRewrite": {    "^/device78": ""  }},
+    "target": "http://192.168.0.78",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device78": ""  }},
   "/device79": {
-    "target": "http://192.168.0.79",  "secure": false,  "pathRewrite": {    "^/device79": ""  }},
+    "target": "http://192.168.0.79",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device79": ""  }},
   "/device80": {
-    "target": "http://192.168.0.80",  "secure": false,  "pathRewrite": {    "^/device80": ""  }},
+    "target": "http://192.168.0.80",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device80": ""  }},
   "/device81": {
-    "target": "http://192.168.0.81",  "secure": false,  "pathRewrite": {    "^/device81": ""  }},
+    "target": "http://192.168.0.81",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device81": ""  }},
   "/device82": {
-    "target": "http://192.168.0.82",  "secure": false,  "pathRewrite": {    "^/device82": ""  }},
+    "target": "http://192.168.0.82",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device82": ""  }},
   "/device83": {
-    "target": "http://192.168.0.83",  "secure": false,  "pathRewrite": {    "^/device83": ""  }},
+    "target": "http://192.168.0.83",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device83": ""  }},
   "/device84": {
-    "target": "http://192.168.0.84",  "secure": false,  "pathRewrite": {    "^/device84": ""  }},
+    "target": "http://192.168.0.84",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device84": ""  }},
   "/device85": {
-    "target": "http://192.168.0.85",  "secure": false,  "pathRewrite": {    "^/device85": ""  }},
+    "target": "http://192.168.0.85",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device85": ""  }},
   "/device86": {
-    "target": "http://192.168.0.86",  "secure": false,  "pathRewrite": {    "^/device86": ""  }},
+    "target": "http://192.168.0.86",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device86": ""  }},
   "/device87": {
-    "target": "http://192.168.0.87",  "secure": false,  "pathRewrite": {    "^/device87": ""  }},
+    "target": "http://192.168.0.87",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device87": ""  }},
   "/device88": {
-    "target": "http://192.168.0.88",  "secure": false,  "pathRewrite": {    "^/device88": ""  }},
+    "target": "http://192.168.0.88",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device88": ""  }},
   "/device89": {
-    "target": "http://192.168.0.89",  "secure": false,  "pathRewrite": {    "^/device89": ""  }},
+    "target": "http://192.168.0.89",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device89": ""  }},
   "/device90": {
-    "target": "http://192.168.0.90",  "secure": false,  "pathRewrite": {    "^/device90": ""  }},
+    "target": "http://192.168.0.90",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device90": ""  }},
   "/device91": {
-    "target": "http://192.168.0.91",  "secure": false,  "pathRewrite": {    "^/device91": ""  }},
+    "target": "http://192.168.0.91",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device91": ""  }},
   "/device92": {
-    "target": "http://192.168.0.92",  "secure": false,  "pathRewrite": {    "^/device92": ""  }},
+    "target": "http://192.168.0.92",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device92": ""  }},
   "/device93": {
-    "target": "http://192.168.0.93",  "secure": false,  "pathRewrite": {    "^/device93": ""  }},
+    "target": "http://192.168.0.93",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device93": ""  }},
   "/device94": {
-    "target": "http://192.168.0.94",  "secure": false,  "pathRewrite": {    "^/device94": ""  }},
+    "target": "http://192.168.0.94",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device94": ""  }},
   "/device95": {
-    "target": "http://192.168.0.95",  "secure": false,  "pathRewrite": {    "^/device95": ""  }},
+    "target": "http://192.168.0.95",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device95": ""  }},
   "/device96": {
-    "target": "http://192.168.0.96",  "secure": false,  "pathRewrite": {    "^/device96": ""  }},
+    "target": "http://192.168.0.96",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device96": ""  }},
   "/device97": {
-    "target": "http://192.168.0.97",  "secure": false,  "pathRewrite": {    "^/device97": ""  }},
+    "target": "http://192.168.0.97",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device97": ""  }},
   "/device98": {
-    "target": "http://192.168.0.98",  "secure": false,  "pathRewrite": {    "^/device98": ""  }},
+    "target": "http://192.168.0.98",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device98": ""  }},
   "/device99": {
-    "target": "http://192.168.0.99",  "secure": false,  "pathRewrite": {    "^/device99": ""  }},
+    "target": "http://192.168.0.99",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device99": ""  }},
   "/device100": {
-    "target": "http://192.168.0.100",  "secure": false,  "pathRewrite": {    "^/device100": ""  }},
+    "target": "http://192.168.0.100",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device100": ""  }},
   "/device101": {
-    "target": "http://192.168.0.101",  "secure": false,  "pathRewrite": {    "^/device101": ""  }},
+    "target": "http://192.168.0.101",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device101": ""  }},
   "/device102": {
-    "target": "http://192.168.0.102",  "secure": false,  "pathRewrite": {    "^/device102": ""  }},
+    "target": "http://192.168.0.102",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device102": ""  }},
   "/device103": {
-    "target": "http://192.168.0.103",  "secure": false,  "pathRewrite": {    "^/device103": ""  }},
+    "target": "http://192.168.0.103",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device103": ""  }},
   "/device104": {
-    "target": "http://192.168.0.104",  "secure": false,  "pathRewrite": {    "^/device104": ""  }},
+    "target": "http://192.168.0.104",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device104": ""  }},
   "/device105": {
-    "target": "http://192.168.0.105",  "secure": false,  "pathRewrite": {    "^/device105": ""  }},
+    "target": "http://192.168.0.105",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device105": ""  }},
   "/device106": {
-    "target": "http://192.168.0.106",  "secure": false,  "pathRewrite": {    "^/device106": ""  }},
+    "target": "http://192.168.0.106",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device106": ""  }},
   "/device107": {
-    "target": "http://192.168.0.107",  "secure": false,  "pathRewrite": {    "^/device107": ""  }},
+    "target": "http://192.168.0.107",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device107": ""  }},
   "/device108": {
-    "target": "http://192.168.0.108",  "secure": false,  "pathRewrite": {    "^/device108": ""  }},
+    "target": "http://192.168.0.108",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device108": ""  }},
   "/device109": {
-    "target": "http://192.168.0.109",  "secure": false,  "pathRewrite": {    "^/device109": ""  }},
+    "target": "http://192.168.0.109",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device109": ""  }},
   "/device110": {
-    "target": "http://192.168.0.110",  "secure": false,  "pathRewrite": {    "^/device110": ""  }},
+    "target": "http://192.168.0.110",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device110": ""  }},
   "/device111": {
-    "target": "http://192.168.0.111",  "secure": false,  "pathRewrite": {    "^/device111": ""  }},
+    "target": "http://192.168.0.111",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device111": ""  }},
   "/device112": {
-    "target": "http://192.168.0.112",  "secure": false,  "pathRewrite": {    "^/device112": ""  }},
+    "target": "http://192.168.0.112",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device112": ""  }},
   "/device113": {
-    "target": "http://192.168.0.113",  "secure": false,  "pathRewrite": {    "^/device113": ""  }},
+    "target": "http://192.168.0.113",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device113": ""  }},
   "/device114": {
-    "target": "http://192.168.0.114",  "secure": false,  "pathRewrite": {    "^/device114": ""  }},
+    "target": "http://192.168.0.114",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device114": ""  }},
   "/device115": {
-    "target": "http://192.168.0.115",  "secure": false,  "pathRewrite": {    "^/device115": ""  }},
+    "target": "http://192.168.0.115",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device115": ""  }},
   "/device116": {
-    "target": "http://192.168.0.116",  "secure": false,  "pathRewrite": {    "^/device116": ""  }},
+    "target": "http://192.168.0.116",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device116": ""  }},
   "/device117": {
-    "target": "http://192.168.0.117",  "secure": false,  "pathRewrite": {    "^/device117": ""  }},
+    "target": "http://192.168.0.117",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device117": ""  }},
   "/device118": {
-    "target": "http://192.168.0.118",  "secure": false,  "pathRewrite": {    "^/device118": ""  }},
+    "target": "http://192.168.0.118",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device118": ""  }},
   "/device119": {
-    "target": "http://192.168.0.119",  "secure": false,  "pathRewrite": {    "^/device119": ""  }},
+    "target": "http://192.168.0.119",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device119": ""  }},
   "/device120": {
-    "target": "http://192.168.0.120",  "secure": false,  "pathRewrite": {    "^/device120": ""  }},
+    "target": "http://192.168.0.120",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device120": ""  }},
   "/device121": {
-    "target": "http://192.168.0.121",  "secure": false,  "pathRewrite": {    "^/device121": ""  }},
+    "target": "http://192.168.0.121",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device121": ""  }},
   "/device122": {
-    "target": "http://192.168.0.122",  "secure": false,  "pathRewrite": {    "^/device122": ""  }},
+    "target": "http://192.168.0.122",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device122": ""  }},
   "/device123": {
-    "target": "http://192.168.0.123",  "secure": false,  "pathRewrite": {    "^/device123": ""  }},
+    "target": "http://192.168.0.123",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device123": ""  }},
   "/device124": {
-    "target": "http://192.168.0.124",  "secure": false,  "pathRewrite": {    "^/device124": ""  }},
+    "target": "http://192.168.0.124",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device124": ""  }},
   "/device125": {
-    "target": "http://192.168.0.125",  "secure": false,  "pathRewrite": {    "^/device125": ""  }},
+    "target": "http://192.168.0.125",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device125": ""  }},
   "/device126": {
-    "target": "http://192.168.0.126",  "secure": false,  "pathRewrite": {    "^/device126": ""  }},
+    "target": "http://192.168.0.126",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device126": ""  }},
   "/device127": {
-    "target": "http://192.168.0.127",  "secure": false,  "pathRewrite": {    "^/device127": ""  }},
+    "target": "http://192.168.0.127",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device127": ""  }},
   "/device128": {
-    "target": "http://192.168.0.128",  "secure": false,  "pathRewrite": {    "^/device128": ""  }},
+    "target": "http://192.168.0.128",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device128": ""  }},
   "/device129": {
-    "target": "http://192.168.0.129",  "secure": false,  "pathRewrite": {    "^/device129": ""  }},
+    "target": "http://192.168.0.129",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device129": ""  }},
   "/device130": {
-    "target": "http://192.168.0.130",  "secure": false,  "pathRewrite": {    "^/device130": ""  }},
+    "target": "http://192.168.0.130",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device130": ""  }},
   "/device131": {
-    "target": "http://192.168.0.131",  "secure": false,  "pathRewrite": {    "^/device131": ""  }},
+    "target": "http://192.168.0.131",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device131": ""  }},
   "/device132": {
-    "target": "http://192.168.0.132",  "secure": false,  "pathRewrite": {    "^/device132": ""  }},
+    "target": "http://192.168.0.132",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device132": ""  }},
   "/device133": {
-    "target": "http://192.168.0.133",  "secure": false,  "pathRewrite": {    "^/device133": ""  }},
+    "target": "http://192.168.0.133",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device133": ""  }},
   "/device134": {
-    "target": "http://192.168.0.134",  "secure": false,  "pathRewrite": {    "^/device134": ""  }},
+    "target": "http://192.168.0.134",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device134": ""  }},
   "/device135": {
-    "target": "http://192.168.0.135",  "secure": false,  "pathRewrite": {    "^/device135": ""  }},
+    "target": "http://192.168.0.135",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device135": ""  }},
   "/device136": {
-    "target": "http://192.168.0.136",  "secure": false,  "pathRewrite": {    "^/device136": ""  }},
+    "target": "http://192.168.0.136",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device136": ""  }},
   "/device137": {
-    "target": "http://192.168.0.137",  "secure": false,  "pathRewrite": {    "^/device137": ""  }},
+    "target": "http://192.168.0.137",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device137": ""  }},
   "/device138": {
-    "target": "http://192.168.0.138",  "secure": false,  "pathRewrite": {    "^/device138": ""  }},
+    "target": "http://192.168.0.138",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device138": ""  }},
   "/device139": {
-    "target": "http://192.168.0.139",  "secure": false,  "pathRewrite": {    "^/device139": ""  }},
+    "target": "http://192.168.0.139",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device139": ""  }},
   "/device140": {
-    "target": "http://192.168.0.140",  "secure": false,  "pathRewrite": {    "^/device140": ""  }},
+    "target": "http://192.168.0.140",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device140": ""  }},
   "/device141": {
-    "target": "http://192.168.0.141",  "secure": false,  "pathRewrite": {    "^/device141": ""  }},
+    "target": "http://192.168.0.141",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device141": ""  }},
   "/device142": {
-    "target": "http://192.168.0.142",  "secure": false,  "pathRewrite": {    "^/device142": ""  }},
+    "target": "http://192.168.0.142",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device142": ""  }},
   "/device143": {
-    "target": "http://192.168.0.143",  "secure": false,  "pathRewrite": {    "^/device143": ""  }},
+    "target": "http://192.168.0.143",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device143": ""  }},
   "/device144": {
-    "target": "http://192.168.0.144",  "secure": false,  "pathRewrite": {    "^/device144": ""  }},
+    "target": "http://192.168.0.144",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device144": ""  }},
   "/device145": {
-    "target": "http://192.168.0.145",  "secure": false,  "pathRewrite": {    "^/device145": ""  }},
+    "target": "http://192.168.0.145",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device145": ""  }},
   "/device146": {
-    "target": "http://192.168.0.146",  "secure": false,  "pathRewrite": {    "^/device146": ""  }},
+    "target": "http://192.168.0.146",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device146": ""  }},
   "/device147": {
-    "target": "http://192.168.0.147",  "secure": false,  "pathRewrite": {    "^/device147": ""  }},
+    "target": "http://192.168.0.147",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device147": ""  }},
   "/device148": {
-    "target": "http://192.168.0.148",  "secure": false,  "pathRewrite": {    "^/device148": ""  }},
+    "target": "http://192.168.0.148",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device148": ""  }},
   "/device149": {
-    "target": "http://192.168.0.149",  "secure": false,  "pathRewrite": {    "^/device149": ""  }},
+    "target": "http://192.168.0.149",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device149": ""  }},
   "/device150": {
-    "target": "http://192.168.0.150",  "secure": false,  "pathRewrite": {    "^/device150": ""  }},
+    "target": "http://192.168.0.150",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device150": ""  }},
   "/device151": {
-    "target": "http://192.168.0.151",  "secure": false,  "pathRewrite": {    "^/device151": ""  }},
+    "target": "http://192.168.0.151",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device151": ""  }},
   "/device152": {
-    "target": "http://192.168.0.152",  "secure": false,  "pathRewrite": {    "^/device152": ""  }},
+    "target": "http://192.168.0.152",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device152": ""  }},
   "/device153": {
-    "target": "http://192.168.0.153",  "secure": false,  "pathRewrite": {    "^/device153": ""  }},
+    "target": "http://192.168.0.153",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device153": ""  }},
   "/device154": {
-    "target": "http://192.168.0.154",  "secure": false,  "pathRewrite": {    "^/device154": ""  }},
+    "target": "http://192.168.0.154",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device154": ""  }},
   "/device155": {
-    "target": "http://192.168.0.155",  "secure": false,  "pathRewrite": {    "^/device155": ""  }},
+    "target": "http://192.168.0.155",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device155": ""  }},
   "/device156": {
-    "target": "http://192.168.0.156",  "secure": false,  "pathRewrite": {    "^/device156": ""  }},
+    "target": "http://192.168.0.156",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device156": ""  }},
   "/device157": {
-    "target": "http://192.168.0.157",  "secure": false,  "pathRewrite": {    "^/device157": ""  }},
+    "target": "http://192.168.0.157",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device157": ""  }},
   "/device158": {
-    "target": "http://192.168.0.158",  "secure": false,  "pathRewrite": {    "^/device158": ""  }},
+    "target": "http://192.168.0.158",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device158": ""  }},
   "/device159": {
-    "target": "http://192.168.0.159",  "secure": false,  "pathRewrite": {    "^/device159": ""  }},
+    "target": "http://192.168.0.159",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device159": ""  }},
   "/device160": {
-    "target": "http://192.168.0.160",  "secure": false,  "pathRewrite": {    "^/device160": ""  }},
+    "target": "http://192.168.0.160",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device160": ""  }},
   "/device161": {
-    "target": "http://192.168.0.161",  "secure": false,  "pathRewrite": {    "^/device161": ""  }},
+    "target": "http://192.168.0.161",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device161": ""  }},
   "/device162": {
-    "target": "http://192.168.0.162",  "secure": false,  "pathRewrite": {    "^/device162": ""  }},
+    "target": "http://192.168.0.162",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device162": ""  }},
   "/device163": {
-    "target": "http://192.168.0.163",  "secure": false,  "pathRewrite": {    "^/device163": ""  }},
+    "target": "http://192.168.0.163",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device163": ""  }},
   "/device164": {
-    "target": "http://192.168.0.164",  "secure": false,  "pathRewrite": {    "^/device164": ""  }},
+    "target": "http://192.168.0.164",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device164": ""  }},
   "/device165": {
-    "target": "http://192.168.0.165",  "secure": false,  "pathRewrite": {    "^/device165": ""  }},
+    "target": "http://192.168.0.165",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device165": ""  }},
   "/device166": {
-    "target": "http://192.168.0.166",  "secure": false,  "pathRewrite": {    "^/device166": ""  }},
+    "target": "http://192.168.0.166",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device166": ""  }},
   "/device167": {
-    "target": "http://192.168.0.167",  "secure": false,  "pathRewrite": {    "^/device167": ""  }},
+    "target": "http://192.168.0.167",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device167": ""  }},
   "/device168": {
-    "target": "http://192.168.0.168",  "secure": false,  "pathRewrite": {    "^/device168": ""  }},
+    "target": "http://192.168.0.168",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device168": ""  }},
   "/device169": {
-    "target": "http://192.168.0.169",  "secure": false,  "pathRewrite": {    "^/device169": ""  }},
+    "target": "http://192.168.0.169",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device169": ""  }},
   "/device170": {
-    "target": "http://192.168.0.170",  "secure": false,  "pathRewrite": {    "^/device170": ""  }},
+    "target": "http://192.168.0.170",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device170": ""  }},
   "/device171": {
-    "target": "http://192.168.0.171",  "secure": false,  "pathRewrite": {    "^/device171": ""  }},
+    "target": "http://192.168.0.171",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device171": ""  }},
   "/device172": {
-    "target": "http://192.168.0.172",  "secure": false,  "pathRewrite": {    "^/device172": ""  }},
+    "target": "http://192.168.0.172",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device172": ""  }},
   "/device173": {
-    "target": "http://192.168.0.173",  "secure": false,  "pathRewrite": {    "^/device173": ""  }},
+    "target": "http://192.168.0.173",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device173": ""  }},
   "/device174": {
-    "target": "http://192.168.0.174",  "secure": false,  "pathRewrite": {    "^/device174": ""  }},
+    "target": "http://192.168.0.174",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device174": ""  }},
   "/device175": {
-    "target": "http://192.168.0.175",  "secure": false,  "pathRewrite": {    "^/device175": ""  }},
+    "target": "http://192.168.0.175",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device175": ""  }},
   "/device176": {
-    "target": "http://192.168.0.176",  "secure": false,  "pathRewrite": {    "^/device176": ""  }},
+    "target": "http://192.168.0.176",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device176": ""  }},
   "/device177": {
-    "target": "http://192.168.0.177",  "secure": false,  "pathRewrite": {    "^/device177": ""  }},
+    "target": "http://192.168.0.177",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device177": ""  }},
   "/device178": {
-    "target": "http://192.168.0.178",  "secure": false,  "pathRewrite": {    "^/device178": ""  }},
+    "target": "http://192.168.0.178",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device178": ""  }},
   "/device179": {
-    "target": "http://192.168.0.179",  "secure": false,  "pathRewrite": {    "^/device179": ""  }},
+    "target": "http://192.168.0.179",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device179": ""  }},
   "/device180": {
-    "target": "http://192.168.0.180",  "secure": false,  "pathRewrite": {    "^/device180": ""  }},
+    "target": "http://192.168.0.180",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device180": ""  }},
   "/device181": {
-    "target": "http://192.168.0.181",  "secure": false,  "pathRewrite": {    "^/device181": ""  }},
+    "target": "http://192.168.0.181",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device181": ""  }},
   "/device182": {
-    "target": "http://192.168.0.182",  "secure": false,  "pathRewrite": {    "^/device182": ""  }},
+    "target": "http://192.168.0.182",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device182": ""  }},
   "/device183": {
-    "target": "http://192.168.0.183",  "secure": false,  "pathRewrite": {    "^/device183": ""  }},
+    "target": "http://192.168.0.183",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device183": ""  }},
   "/device184": {
-    "target": "http://192.168.0.184",  "secure": false,  "pathRewrite": {    "^/device184": ""  }},
+    "target": "http://192.168.0.184",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device184": ""  }},
   "/device185": {
-    "target": "http://192.168.0.185",  "secure": false,  "pathRewrite": {    "^/device185": ""  }},
+    "target": "http://192.168.0.185",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device185": ""  }},
   "/device186": {
-    "target": "http://192.168.0.186",  "secure": false,  "pathRewrite": {    "^/device186": ""  }},
+    "target": "http://192.168.0.186",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device186": ""  }},
   "/device187": {
-    "target": "http://192.168.0.187",  "secure": false,  "pathRewrite": {    "^/device187": ""  }},
+    "target": "http://192.168.0.187",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device187": ""  }},
   "/device188": {
-    "target": "http://192.168.0.188",  "secure": false,  "pathRewrite": {    "^/device188": ""  }},
+    "target": "http://192.168.0.188",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device188": ""  }},
   "/device189": {
-    "target": "http://192.168.0.189",  "secure": false,  "pathRewrite": {    "^/device189": ""  }},
+    "target": "http://192.168.0.189",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device189": ""  }},
   "/device190": {
-    "target": "http://192.168.0.190",  "secure": false,  "pathRewrite": {    "^/device190": ""  }},
+    "target": "http://192.168.0.190",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device190": ""  }},
   "/device191": {
-    "target": "http://192.168.0.191",  "secure": false,  "pathRewrite": {    "^/device191": ""  }},
+    "target": "http://192.168.0.191",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device191": ""  }},
   "/device192": {
-    "target": "http://192.168.0.192",  "secure": false,  "pathRewrite": {    "^/device192": ""  }},
+    "target": "http://192.168.0.192",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device192": ""  }},
   "/device193": {
-    "target": "http://192.168.0.193",  "secure": false,  "pathRewrite": {    "^/device193": ""  }},
+    "target": "http://192.168.0.193",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device193": ""  }},
   "/device194": {
-    "target": "http://192.168.0.194",  "secure": false,  "pathRewrite": {    "^/device194": ""  }},
+    "target": "http://192.168.0.194",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device194": ""  }},
   "/device195": {
-    "target": "http://192.168.0.195",  "secure": false,  "pathRewrite": {    "^/device195": ""  }},
+    "target": "http://192.168.0.195",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device195": ""  }},
   "/device196": {
-    "target": "http://192.168.0.196",  "secure": false,  "pathRewrite": {    "^/device196": ""  }},
+    "target": "http://192.168.0.196",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device196": ""  }},
   "/device197": {
-    "target": "http://192.168.0.197",  "secure": false,  "pathRewrite": {    "^/device197": ""  }},
+    "target": "http://192.168.0.197",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device197": ""  }},
   "/device198": {
-    "target": "http://192.168.0.198",  "secure": false,  "pathRewrite": {    "^/device198": ""  }},
+    "target": "http://192.168.0.198",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device198": ""  }},
   "/device199": {
-    "target": "http://192.168.0.199",  "secure": false,  "pathRewrite": {    "^/device199": ""  }},
+    "target": "http://192.168.0.199",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device199": ""  }},
   "/device200": {
-    "target": "http://192.168.0.200",  "secure": false,  "pathRewrite": {    "^/device200": ""  }},
+    "target": "http://192.168.0.200",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device200": ""  }},
   "/device201": {
-    "target": "http://192.168.0.201",  "secure": false,  "pathRewrite": {    "^/device201": ""  }},
+    "target": "http://192.168.0.201",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device201": ""  }},
   "/device202": {
-    "target": "http://192.168.0.202",  "secure": false,  "pathRewrite": {    "^/device202": ""  }},
+    "target": "http://192.168.0.202",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device202": ""  }},
   "/device203": {
-    "target": "http://192.168.0.203",  "secure": false,  "pathRewrite": {    "^/device203": ""  }},
+    "target": "http://192.168.0.203",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device203": ""  }},
   "/device204": {
-    "target": "http://192.168.0.204",  "secure": false,  "pathRewrite": {    "^/device204": ""  }},
+    "target": "http://192.168.0.204",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device204": ""  }},
   "/device205": {
-    "target": "http://192.168.0.205",  "secure": false,  "pathRewrite": {    "^/device205": ""  }},
+    "target": "http://192.168.0.205",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device205": ""  }},
   "/device206": {
-    "target": "http://192.168.0.206",  "secure": false,  "pathRewrite": {    "^/device206": ""  }},
+    "target": "http://192.168.0.206",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device206": ""  }},
   "/device207": {
-    "target": "http://192.168.0.207",  "secure": false,  "pathRewrite": {    "^/device207": ""  }},
+    "target": "http://192.168.0.207",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device207": ""  }},
   "/device208": {
-    "target": "http://192.168.0.208",  "secure": false,  "pathRewrite": {    "^/device208": ""  }},
+    "target": "http://192.168.0.208",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device208": ""  }},
   "/device209": {
-    "target": "http://192.168.0.209",  "secure": false,  "pathRewrite": {    "^/device209": ""  }},
+    "target": "http://192.168.0.209",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device209": ""  }},
   "/device210": {
-    "target": "http://192.168.0.210",  "secure": false,  "pathRewrite": {    "^/device210": ""  }},
+    "target": "http://192.168.0.210",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device210": ""  }},
   "/device211": {
-    "target": "http://192.168.0.211",  "secure": false,  "pathRewrite": {    "^/device211": ""  }},
+    "target": "http://192.168.0.211",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device211": ""  }},
   "/device212": {
-    "target": "http://192.168.0.212",  "secure": false,  "pathRewrite": {    "^/device212": ""  }},
+    "target": "http://192.168.0.212",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device212": ""  }},
   "/device213": {
-    "target": "http://192.168.0.213",  "secure": false,  "pathRewrite": {    "^/device213": ""  }},
+    "target": "http://192.168.0.213",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device213": ""  }},
   "/device214": {
-    "target": "http://192.168.0.214",  "secure": false,  "pathRewrite": {    "^/device214": ""  }},
+    "target": "http://192.168.0.214",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device214": ""  }},
   "/device215": {
-    "target": "http://192.168.0.215",  "secure": false,  "pathRewrite": {    "^/device215": ""  }},
+    "target": "http://192.168.0.215",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device215": ""  }},
   "/device216": {
-    "target": "http://192.168.0.216",  "secure": false,  "pathRewrite": {    "^/device216": ""  }},
+    "target": "http://192.168.0.216",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device216": ""  }},
   "/device217": {
-    "target": "http://192.168.0.217",  "secure": false,  "pathRewrite": {    "^/device217": ""  }},
+    "target": "http://192.168.0.217",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device217": ""  }},
   "/device218": {
-    "target": "http://192.168.0.218",  "secure": false,  "pathRewrite": {    "^/device218": ""  }},
+    "target": "http://192.168.0.218",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device218": ""  }},
   "/device219": {
-    "target": "http://192.168.0.219",  "secure": false,  "pathRewrite": {    "^/device219": ""  }},
+    "target": "http://192.168.0.219",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device219": ""  }},
   "/device220": {
-    "target": "http://192.168.0.220",  "secure": false,  "pathRewrite": {    "^/device220": ""  }},
+    "target": "http://192.168.0.220",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device220": ""  }},
   "/device221": {
-    "target": "http://192.168.0.221",  "secure": false,  "pathRewrite": {    "^/device221": ""  }},
+    "target": "http://192.168.0.221",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device221": ""  }},
   "/device222": {
-    "target": "http://192.168.0.222",  "secure": false,  "pathRewrite": {    "^/device222": ""  }},
+    "target": "http://192.168.0.222",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device222": ""  }},
   "/device223": {
-    "target": "http://192.168.0.223",  "secure": false,  "pathRewrite": {    "^/device223": ""  }},
+    "target": "http://192.168.0.223",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device223": ""  }},
   "/device224": {
-    "target": "http://192.168.0.224",  "secure": false,  "pathRewrite": {    "^/device224": ""  }},
+    "target": "http://192.168.0.224",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device224": ""  }},
   "/device225": {
-    "target": "http://192.168.0.225",  "secure": false,  "pathRewrite": {    "^/device225": ""  }},
+    "target": "http://192.168.0.225",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device225": ""  }},
   "/device226": {
-    "target": "http://192.168.0.226",  "secure": false,  "pathRewrite": {    "^/device226": ""  }},
+    "target": "http://192.168.0.226",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device226": ""  }},
   "/device227": {
-    "target": "http://192.168.0.227",  "secure": false,  "pathRewrite": {    "^/device227": ""  }},
+    "target": "http://192.168.0.227",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device227": ""  }},
   "/device228": {
-    "target": "http://192.168.0.228",  "secure": false,  "pathRewrite": {    "^/device228": ""  }},
+    "target": "http://192.168.0.228",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device228": ""  }},
   "/device229": {
-    "target": "http://192.168.0.229",  "secure": false,  "pathRewrite": {    "^/device229": ""  }},
+    "target": "http://192.168.0.229",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device229": ""  }},
   "/device230": {
-    "target": "http://192.168.0.230",  "secure": false,  "pathRewrite": {    "^/device230": ""  }},
+    "target": "http://192.168.0.230",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device230": ""  }},
   "/device231": {
-    "target": "http://192.168.0.231",  "secure": false,  "pathRewrite": {    "^/device231": ""  }},
+    "target": "http://192.168.0.231",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device231": ""  }},
   "/device232": {
-    "target": "http://192.168.0.232",  "secure": false,  "pathRewrite": {    "^/device232": ""  }},
+    "target": "http://192.168.0.232",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device232": ""  }},
   "/device233": {
-    "target": "http://192.168.0.233",  "secure": false,  "pathRewrite": {    "^/device233": ""  }},
+    "target": "http://192.168.0.233",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device233": ""  }},
   "/device234": {
-    "target": "http://192.168.0.234",  "secure": false,  "pathRewrite": {    "^/device234": ""  }},
+    "target": "http://192.168.0.234",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device234": ""  }},
   "/device235": {
-    "target": "http://192.168.0.235",  "secure": false,  "pathRewrite": {    "^/device235": ""  }},
+    "target": "http://192.168.0.235",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device235": ""  }},
   "/device236": {
-    "target": "http://192.168.0.236",  "secure": false,  "pathRewrite": {    "^/device236": ""  }},
+    "target": "http://192.168.0.236",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device236": ""  }},
   "/device237": {
-    "target": "http://192.168.0.237",  "secure": false,  "pathRewrite": {    "^/device237": ""  }},
+    "target": "http://192.168.0.237",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device237": ""  }},
   "/device238": {
-    "target": "http://192.168.0.238",  "secure": false,  "pathRewrite": {    "^/device238": ""  }},
+    "target": "http://192.168.0.238",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device238": ""  }},
   "/device239": {
-    "target": "http://192.168.0.239",  "secure": false,  "pathRewrite": {    "^/device239": ""  }},
+    "target": "http://192.168.0.239",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device239": ""  }},
   "/device240": {
-    "target": "http://192.168.0.240",  "secure": false,  "pathRewrite": {    "^/device240": ""  }},
+    "target": "http://192.168.0.240",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device240": ""  }},
   "/device241": {
-    "target": "http://192.168.0.241",  "secure": false,  "pathRewrite": {    "^/device241": ""  }},
+    "target": "http://192.168.0.241",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device241": ""  }},
   "/device242": {
-    "target": "http://192.168.0.242",  "secure": false,  "pathRewrite": {    "^/device242": ""  }},
+    "target": "http://192.168.0.242",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device242": ""  }},
   "/device243": {
-    "target": "http://192.168.0.243",  "secure": false,  "pathRewrite": {    "^/device243": ""  }},
+    "target": "http://192.168.0.243",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device243": ""  }},
   "/device244": {
-    "target": "http://192.168.0.244",  "secure": false,  "pathRewrite": {    "^/device244": ""  }},
+    "target": "http://192.168.0.244",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device244": ""  }},
   "/device245": {
-    "target": "http://192.168.0.245",  "secure": false,  "pathRewrite": {    "^/device245": ""  }},
+    "target": "http://192.168.0.245",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device245": ""  }},
   "/device246": {
-    "target": "http://192.168.0.246",  "secure": false,  "pathRewrite": {    "^/device246": ""  }},
+    "target": "http://192.168.0.246",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device246": ""  }},
   "/device247": {
-    "target": "http://192.168.0.247",  "secure": false,  "pathRewrite": {    "^/device247": ""  }},
+    "target": "http://192.168.0.247",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device247": ""  }},
   "/device248": {
-    "target": "http://192.168.0.248",  "secure": false,  "pathRewrite": {    "^/device248": ""  }},
+    "target": "http://192.168.0.248",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device248": ""  }},
   "/device249": {
-    "target": "http://192.168.0.249",  "secure": false,  "pathRewrite": {    "^/device249": ""  }},
+    "target": "http://192.168.0.249",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device249": ""  }},
   "/device250": {
-    "target": "http://192.168.0.250",  "secure": false,  "pathRewrite": {    "^/device250": ""  }},
+    "target": "http://192.168.0.250",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device250": ""  }},
   "/device251": {
-    "target": "http://192.168.0.251",  "secure": false,  "pathRewrite": {    "^/device251": ""  }},
+    "target": "http://192.168.0.251",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device251": ""  }},
   "/device252": {
-    "target": "http://192.168.0.252",  "secure": false,  "pathRewrite": {    "^/device252": ""  }},
+    "target": "http://192.168.0.252",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device252": ""  }},
   "/device253": {
-    "target": "http://192.168.0.253",  "secure": false,  "pathRewrite": {    "^/device253": ""  }},
+    "target": "http://192.168.0.253",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device253": ""  }},
   "/device254": {
-    "target": "http://192.168.0.254",  "secure": false,  "pathRewrite": {    "^/device254": ""  }},
+    "target": "http://192.168.0.254",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device254": ""  }},
   "/device255": {
-    "target": "http://192.168.0.255",  "secure": false,  "pathRewrite": {    "^/device255": ""  }}
+    "target": "http://192.168.0.255",  "secure": false, "timeout": 5000, "pathRewrite": {    "^/device255": ""  }}
 }
