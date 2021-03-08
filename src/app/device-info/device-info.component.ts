@@ -12,20 +12,28 @@ import { MessageService} from '../message.service';
 export class DeviceInfoComponent implements OnInit {
 
   devices: DeviceInfo[] = [];
+  tempDebug = '';
 
   getDevices(): void {
 
     const devices$ = this.deviceInfoService.getDeviceInfo();
-    console.log(devices$);
+    console.log(this.tempDebug);
     devices$.forEach(deviceInfo$ => deviceInfo$.subscribe((device: DeviceInfo) => {
       this.devices.push(device);
     }));
   }
 
-  constructor(
-    private deviceInfoService: DeviceInfoService,
-    private messageService: MessageService
-  ) { }
+  constructor(private deviceInfoService: DeviceInfoService) {
+    // temp code
+    for (let i = 0; i <= 255; i++) {
+      this.tempDebug += '\n"/device' + i + '": {';
+      this.tempDebug += '  "secure": false,';
+      this.tempDebug += '  "pathRewrite": {';
+      this.tempDebug += '    "^/device' + i + '": ""';
+      this.tempDebug += '  }';
+      this.tempDebug += '},';
+    }
+  }
   ngOnInit(): void {
     this.getDevices();
   }

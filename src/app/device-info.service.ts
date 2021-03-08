@@ -18,8 +18,8 @@ export class DeviceInfoService {
     private http: HttpClient,
   ) {
     this.deviceUrls = [];
-    for (let i = 5; i <= 8; i++) {
-      this.deviceUrls.push(`/api${i}/info`);
+    for (let i = 0; i <= 255; i++) {
+      this.deviceUrls.push(`/device${i}/info`);
     }
   }
 
