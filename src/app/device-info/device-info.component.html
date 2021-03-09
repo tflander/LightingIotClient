@@ -1,20 +1,19 @@
 <h2>🎛 My Devices</h2>
 <div class="devices">
-  <!--
-  <div *ngFor="let deviceInfo of devices">
-    <h3>{{deviceInfo.MacAddress}} Details</h3>
-    <div><span>IP: </span>{{deviceInfo.IP}}</div>
-    <div><span>Program: </span>{{deviceInfo.Program}}</div>
-    <div><span>Program Version: </span>{{deviceInfo.ProgramVersion}}</div>
-  </div>
-  -->
 
   <div *ngFor="let device of devices">
     <div *ngIf="device">
-      <h3>{{device.MacAddress}} Details</h3>
-      <div><span class="itemLabel">IP: </span>{{device.IP}}</div>
-      <div><span class="itemLabel">Program: </span>🌈 {{device.Program}}</div>
-      <div><span class="itemLabel">Program Version: </span>{{device.ProgramVersion}}</div>
+
+      <div *ngIf="device.MacAddress == '7c:9e:bd:f2:ed:24'; then showTvLights else showUnknownDevice"></div>
+      <ng-template #showTvLights>
+        TODO: special logic for lights behind TV 🌈 {{device.IP}}
+      </ng-template>
+      <ng-template #showUnknownDevice>
+        <h3>Unmapped Device with mac address {{device.MacAddress}}</h3>
+        <div><span class="itemLabel">IP: </span>{{device.IP}}</div>
+        <div><span class="itemLabel">Program: </span>{{device.Program}}</div>
+        <div><span class="itemLabel">Program Version: </span>{{device.ProgramVersion}}</div>
+      </ng-template>
     </div>
   </div>
 </div>
