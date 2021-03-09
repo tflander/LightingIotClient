@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { ColorPickerService, Cmyk } from 'ngx-color-picker';
+import { DeviceInfo} from '../device-info';
 
 @Component({
   selector: 'app-rgbw-color-selector',
@@ -7,6 +8,9 @@ import { ColorPickerService, Cmyk } from 'ngx-color-picker';
   styleUrls: ['./rgbw-color-selector.component.sass']
 })
 export class RgbwColorSelectorComponent implements OnInit {
+
+  @Input()
+  device!: DeviceInfo;
 
   public color1 = '#2889e9';  // TODO: set to current color
 
