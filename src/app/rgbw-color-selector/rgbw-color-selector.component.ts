@@ -8,7 +8,10 @@ import { ColorPickerService, Cmyk } from 'ngx-color-picker';
 })
 export class RgbwColorSelectorComponent implements OnInit {
 
-  public color1 = '#2889e9';
+  public color1 = '#2889e9';  // TODO: set to current color
+
+  // TODO: event processing per
+  //   https://stackblitz.com/github/zefoy/ngx-color-picker/tree/master?file=projects%2Fapp%2Fsrc%2Fapp%2Fapp.component.ts
 
   public onEventLog(event: string, data: any): void {
     console.log(event, data);
