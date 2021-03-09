@@ -1,0 +1,10 @@
+<p>rgbw-color-selector works!</p>
+<input
+  [style.background]="color1"
+  [(colorPicker)]="color1"
+  (colorPickerOpen)="onEventLog('colorPickerOpen', $event)"
+  (colorPickerClose)="onEventLog('colorPickerClose', $event)"
+  (cpInputChange)="onEventLog('cpInputChange', $event)"
+  (cpSliderDragStart)="onEventLog('cpSliderDragStart', $event)"
+  (cpSliderDragEnd)="onEventLog('cpSliderDragEnd', $event)"
+/>

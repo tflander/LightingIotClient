@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceInfo} from '../device-info';
 import { DeviceInfoService} from '../device-info.service';
-import { MessageService} from '../message.service';
 
 @Component({
   selector: 'app-device-info',

@@ -7,6 +7,7 @@
       <div *ngIf="device.MacAddress == '7c:9e:bd:f2:ed:24'; then showTvLights else showUnknownDevice"></div>
       <ng-template #showTvLights>
         TODO: special logic for lights behind TV 🌈 {{device.IP}}
+        <app-rgbw-color-selector></app-rgbw-color-selector>
       </ng-template>
       <ng-template #showUnknownDevice>
         <h3>Unmapped Device with mac address {{device.MacAddress}}</h3>
