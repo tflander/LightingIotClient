@@ -36,11 +36,13 @@ export class RgbwColorSelectorComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.device.duties) {
-      this.scaledColors.Red = Math.floor(this.device.duties.Red / 4);
-      this.scaledColors.Green = Math.floor(this.device.duties.Green / 4);
-      this.scaledColors.Blue = Math.floor(this.device.duties.Blue / 4);
-      this.scaledColors.White = Math.floor(this.device.duties.White / 4);
-      this.scaledColors.UltraViolet = Math.floor(this.device.duties.UltraViolet / 4);
+      /* tslint:disable:no-bitwise */
+      this.scaledColors.Red = this.device.duties.Red >> 2;
+      this.scaledColors.Green = this.device.duties.Green >> 2;
+      this.scaledColors.Blue = this.device.duties.Blue >> 2;
+      this.scaledColors.White = this.device.duties.White >> 2;
+      this.scaledColors.UltraViolet = this.device.duties.UltraViolet >> 2;
+      /* tslint:enable:no-bitwise */
     }
   }
 
