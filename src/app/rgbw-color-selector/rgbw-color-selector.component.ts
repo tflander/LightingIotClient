@@ -32,11 +32,26 @@ export class RgbwColorSelectorComponent implements OnInit {
       White!: number;
       UltraViolet!: number;
     }();
-
   }
 
   ngOnInit(): void {
-    if (this.device.duties) {
+    this.scale10bitTo8bit();
+    this.resolveDeviceName();
+  }
+
+  private resolveDeviceName(): void {
+    if (this.device.MacAddress === '3c:71:bf:6d:16:bc') {
+      this.deviceName = 'Original RGBW + UV prototype';
+    } else if (this.device.MacAddress === '7c:9e:bd:f2:ed:24') {
+      this.deviceName = 'TV Ambient Lighting';
+    } else {
+      this.deviceName += (' with MAC Address [' + this.device.MacAddress + ']');
+    }
+  }
+
+  private scale10bitTo8bit(): void {
+    if (this.device.duties)
+    {
       /* tslint:disable:no-bitwise */
       this.scaledColors.Red = this.device.duties.Red >> 2;
       this.scaledColors.Green = this.device.duties.Green >> 2;
@@ -44,16 +59,6 @@ export class RgbwColorSelectorComponent implements OnInit {
       this.scaledColors.White = this.device.duties.White >> 2;
       this.scaledColors.UltraViolet = this.device.duties.UltraViolet >> 2;
       /* tslint:enable:no-bitwise */
-
-      if (this.device.MacAddress === '3c:71:bf:6d:16:bc') {
-        this.deviceName = 'Original RGBW + UV prototype';
-      } else if (this.device.MacAddress === '7c:9e:bd:f2:ed:24') {
-        this.deviceName = 'TV Ambient Lighting';
-      } else {
-        this.deviceName += (' with MAC Address [' + this.device.MacAddress + ']');
-      }
-
     }
   }
-
 }
