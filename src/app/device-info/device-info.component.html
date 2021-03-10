@@ -4,6 +4,7 @@
   <div *ngFor="let device of devices">
     <div *ngIf="device">
 
+      <!-- original prototype = 3c:71:bf:6d:16:bc -->
       <div *ngIf="device.MacAddress == '7c:9e:bd:f2:ed:24'; then showTvLights else showUnknownDevice"></div>
 
       <ng-template #showTvLights>
