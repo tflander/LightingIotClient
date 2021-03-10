@@ -8,6 +8,7 @@
 </ul>
 <input
   [style.background]="rgbColor"
+  [cpAlphaChannel]="'disabled'"
   [(colorPicker)]="rgbColor"
   (colorPickerOpen)="onEventLog('colorPickerOpen', $event)"
   (colorPickerClose)="onEventLog('colorPickerClose', $event)"
