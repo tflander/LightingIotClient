@@ -15,6 +15,7 @@ export class RgbwColorSelectorComponent implements OnInit {
 
   public rgbColor = '#2889e9';  // TODO: set to current color
   public scaledColors: ColorDuties;
+  public deviceName = 'Unknown Device';
 
   // TODO: event processing per
   //   https://stackblitz.com/github/zefoy/ngx-color-picker/tree/master?file=projects%2Fapp%2Fsrc%2Fapp%2Fapp.component.ts
@@ -43,6 +44,15 @@ export class RgbwColorSelectorComponent implements OnInit {
       this.scaledColors.White = this.device.duties.White >> 2;
       this.scaledColors.UltraViolet = this.device.duties.UltraViolet >> 2;
       /* tslint:enable:no-bitwise */
+
+      if (this.device.MacAddress === '3c:71:bf:6d:16:bc') {
+        this.deviceName = 'Original RGBW + UV prototype';
+      } else if (this.device.MacAddress === '7c:9e:bd:f2:ed:24') {
+        this.deviceName = 'TV Ambient Lighting';
+      } else {
+        this.deviceName += (' with MAC Address [' + this.device.MacAddress + ']');
+      }
+
     }
   }
 
