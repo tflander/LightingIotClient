@@ -1,4 +1,11 @@
-<p>🌈 rgbw-color-selector works! {{device.duties?.Green}}</p>
+<p>🌈 TODO: look up device name by mac id</p>
+<ul *ngIf="device.duties">
+  <li><span class="itemLabel">Red: </span>{{scaledColors.Red}}</li>
+  <li><span class="itemLabel">Green: </span>{{scaledColors.Green}}</li>
+  <li><span class="itemLabel">Blue: </span>{{scaledColors.Blue}}</li>
+  <li><span class="itemLabel">White: </span>{{scaledColors.White}}</li>
+  <li><span class="itemLabel">Ultra Violet: </span>{{scaledColors.UltraViolet}}</li>
+</ul>
 <input
   [style.background]="color1"
   [(colorPicker)]="color1"
