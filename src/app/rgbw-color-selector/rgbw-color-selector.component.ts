@@ -13,7 +13,7 @@ export class RgbwColorSelectorComponent implements OnInit {
   @Input()
   device!: DeviceInfo;
 
-  public color1 = '#2889e9';  // TODO: set to current color
+  public rgbColor = '#2889e9';  // TODO: set to current color
   public scaledColors: ColorDuties;
 
   // TODO: event processing per

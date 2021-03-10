@@ -7,8 +7,8 @@
   <li><span class="itemLabel">Ultra Violet: </span>{{scaledColors.UltraViolet}}</li>
 </ul>
 <input
-  [style.background]="color1"
-  [(colorPicker)]="color1"
+  [style.background]="rgbColor"
+  [(colorPicker)]="rgbColor"
   (colorPickerOpen)="onEventLog('colorPickerOpen', $event)"
   (colorPickerClose)="onEventLog('colorPickerClose', $event)"
   (cpInputChange)="onEventLog('cpInputChange', $event)"
