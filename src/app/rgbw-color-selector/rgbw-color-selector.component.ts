@@ -13,13 +13,13 @@ export class RgbwColorSelectorComponent implements OnInit {
   @Input()
   device!: DeviceInfo;
 
-  public rgbColor = '#2889e9';  // TODO: set to current color
+  public rgbColor = 'undefined';
   public scaledColors: ColorDuties;
   public deviceName = 'Unknown Device';
 
   public changeColor(data: any): void {
+    console.log(data);
     console.log('TODO: change color', data.color);
-    console.log(this.colorToHexRgb(data.color));
   }
 
   constructor(private cpService: ColorPickerService) {
@@ -57,18 +57,15 @@ export class RgbwColorSelectorComponent implements OnInit {
       this.scaledColors.White = this.device.duties.White >> 2;
       this.scaledColors.UltraViolet = this.device.duties.UltraViolet >> 2;
       /* tslint:enable:no-bitwise */
+
+      this.rgbColor = this.colorToHexRgb(this.scaledColors);
     }
   }
 
-  private colorToHexRgb(color: any): string {
-    const hsva = this.cpService.stringToHsva(color);
-    if (hsva) {
-      const rgba = this.cpService.hsvaToRgba(hsva);
-      const r = Math.round(rgba.r * 255).toString(16);
-      const g = Math.round(rgba.g * 255).toString(16);
-      const b = Math.round(rgba.b * 255).toString(16);
+  private colorToHexRgb(color: ColorDuties): string {
+      const r = Math.round(color.Red).toString(16).padStart(2, '0');
+      const g = Math.round(color.Green).toString(16).padStart(2, '0');
+      const b = Math.round(color.Blue).toString(16).padStart(2, '0');
       return '#' + r + g + b;
-    }
-    return '';
   }
 }
