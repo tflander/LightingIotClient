@@ -10,9 +10,5 @@
   [style.background]="rgbColor"
   [cpAlphaChannel]="'disabled'"
   [(colorPicker)]="rgbColor"
-  (colorPickerOpen)="onEventLog('colorPickerOpen', $event)"
-  (colorPickerClose)="onEventLog('colorPickerClose', $event)"
-  (cpInputChange)="onEventLog('cpInputChange', $event)"
-  (cpSliderDragStart)="onEventLog('cpSliderDragStart', $event)"
-  (cpSliderDragEnd)="onEventLog('cpSliderDragEnd', $event)"
+  (cpSliderDragEnd)="changeColor($event)"
 />

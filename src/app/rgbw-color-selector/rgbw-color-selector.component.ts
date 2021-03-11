@@ -17,11 +17,9 @@ export class RgbwColorSelectorComponent implements OnInit {
   public scaledColors: ColorDuties;
   public deviceName = 'Unknown Device';
 
-  // TODO: event processing per
-  //   https://stackblitz.com/github/zefoy/ngx-color-picker/tree/master?file=projects%2Fapp%2Fsrc%2Fapp%2Fapp.component.ts
-
-  public onEventLog(event: string, data: any): void {
-    console.log(event, data);
+  public changeColor(data: any): void {
+    console.log('TODO: change color', data.color);
+    console.log(this.colorToHexRgb(data.color));
   }
 
   constructor(private cpService: ColorPickerService) {
@@ -60,5 +58,17 @@ export class RgbwColorSelectorComponent implements OnInit {
       this.scaledColors.UltraViolet = this.device.duties.UltraViolet >> 2;
       /* tslint:enable:no-bitwise */
     }
+  }
+
+  private colorToHexRgb(color: any): string {
+    const hsva = this.cpService.stringToHsva(color);
+    if (hsva) {
+      const rgba = this.cpService.hsvaToRgba(hsva);
+      const r = Math.round(rgba.r * 255).toString(16);
+      const g = Math.round(rgba.g * 255).toString(16);
+      const b = Math.round(rgba.b * 255).toString(16);
+      return '#' + r + g + b;
+    }
+    return '';
   }
 }
