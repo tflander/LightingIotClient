@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import { ColorPickerService, Cmyk } from 'ngx-color-picker';
 import { DeviceInfo} from '../device-info';
 import {ColorDuties} from '../colorDuties';
+import {LedColorService} from '../led-color.service';
 
 @Component({
   selector: 'app-rgbw-color-selector',
@@ -17,12 +18,10 @@ export class RgbwColorSelectorComponent implements OnInit {
   public scaledColors: ColorDuties;
   public deviceName = 'Unknown Device';
 
-  public changeColor(data: any): void {
-    console.log(data);
-    console.log('TODO: change color', data.color);
-  }
-
-  constructor(private cpService: ColorPickerService) {
+  constructor(
+    public ledColorService: LedColorService,
+    private cpService: ColorPickerService
+  ) {
     this.scaledColors = new class implements ColorDuties {
       Red!: number;
       Green!: number;
@@ -35,6 +34,38 @@ export class RgbwColorSelectorComponent implements OnInit {
   ngOnInit(): void {
     this.scale10bitTo8bit();
     this.resolveDeviceName();
+  }
+
+  public changeColor(data: any): void {
+    console.log(`color change to ${data.color}`);
+    console.log(data);
+    this.ledColorService.setColor('/device5', this.rgbStringToColorDuties(data.color));  // TODO: inject device URL
+  }
+
+  private rgbStringToColorDuties(rgbColors: string): ColorDuties {
+
+    const colors = new class implements ColorDuties {
+      Blue!: number;
+      Green!: number;
+      Red!: number;
+      UltraViolet!: number;
+      White!: number;
+    }();
+    colors.Red = 0;
+    colors.Blue = 0;
+    colors.Green = 0;
+    colors.White = 0;
+    colors.UltraViolet = 0;
+
+    const hsva = this.cpService.stringToHsva(rgbColors);
+    if (hsva) {
+      const rgba = this.cpService.hsvaToRgba(hsva);
+      colors.Red = Math.round(rgba.r * 1023);
+      colors.Green = Math.round(rgba.g * 1023);
+      colors.Blue = Math.round(rgba.b * 1023);
+    }
+
+    return colors;
   }
 
   private resolveDeviceName(): void {
