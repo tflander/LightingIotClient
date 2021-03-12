@@ -15,6 +15,7 @@ export class RgbwColorSelectorComponent implements OnInit {
   device!: DeviceInfo;
 
   public rgbColor = 'undefined';
+  public whiteIntensity = '#000';
   public scaledColors: ColorDuties;
   public deviceName = 'Unknown Device';
 
@@ -40,6 +41,13 @@ export class RgbwColorSelectorComponent implements OnInit {
     const ip = this.device.IP;
     const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
     this.ledColorService.setColor(proxyBaseUrl, this.rgbStringToColorDuties(color));
+  }
+
+  public changeWhite(color: string): void {
+    const intensityAsHex = color.substr(1, 2 );
+    const intensity8Bit = parseInt(String(Number(`0x${intensityAsHex}`)), 10);
+    const intensity10Bit = intensity8Bit * 4;
+    console.log(intensity10Bit);
   }
 
   private rgbStringToColorDuties(rgbColors: string): ColorDuties {

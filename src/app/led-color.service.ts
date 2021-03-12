@@ -25,8 +25,6 @@ export class LedColorService {
         `\t"White": ${colors.White}\n` +
         '}';
 
-    console.log(`set color called ${url} ${body}`);
-
     this.http.put<any>(url, body)
       .subscribe(data => console.log(data));
   }

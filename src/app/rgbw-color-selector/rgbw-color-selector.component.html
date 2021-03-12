@@ -13,3 +13,11 @@
   [cpPresetColors]="['#00f', '#0f0', '#0ff', '#f00', '#f0f', '#ff0']"
   (colorPickerChange)="changeColor($event)"
 />
+<input
+  [(colorPicker)]="whiteIntensity"
+  [cpColorMode]="'grayscale'"
+  [cpAlphaChannel]="'disabled'"
+  [style.background]="whiteIntensity"
+  (colorPickerChange)="changeWhite($event)"
+/>
+
