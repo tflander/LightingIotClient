@@ -37,9 +37,9 @@ export class RgbwColorSelectorComponent implements OnInit {
   }
 
   public changeColor(data: any): void {
-    console.log(`color change to ${data.color}`);
-    console.log(data);
-    this.ledColorService.setColor('/device5', this.rgbStringToColorDuties(data.color));  // TODO: inject device URL
+    const ip = this.device.IP;
+    const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
+    this.ledColorService.setColor(proxyBaseUrl, this.rgbStringToColorDuties(data.color));
   }
 
   private rgbStringToColorDuties(rgbColors: string): ColorDuties {
