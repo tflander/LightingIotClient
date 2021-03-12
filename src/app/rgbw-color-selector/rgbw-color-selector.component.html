@@ -10,5 +10,6 @@
   [style.background]="rgbColor"
   [cpAlphaChannel]="'disabled'"
   [(colorPicker)]="rgbColor"
-  (cpSliderDragEnd)="changeColor($event)"
+  [cpPresetColors]="['#00f', '#0f0', '#0ff', '#f00', '#f0f', '#ff0']"
+  (colorPickerChange)="changeColor($event)"
 />
