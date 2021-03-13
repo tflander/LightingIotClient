@@ -16,33 +16,26 @@ export class RgbwColorSelectorComponent implements OnInit {
 
   public rgbColor = 'undefined';
   public whiteIntensity = '#000';
-  public scaledColors: ColorDuties;
   public deviceName = 'Unknown Device';
 
   constructor(
     public ledColorService: LedColorService,
     private cpService: ColorPickerService
-  ) {
-    this.scaledColors = new class implements ColorDuties {
-      Red!: number;
-      Green!: number;
-      Blue!: number;
-      White!: number;
-      UltraViolet!: number;
-    }();
-  }
+  ) {}
 
   ngOnInit(): void {
-    this.scale10bitTo8bit();
+    this.initFromLedDuties();
     this.resolveDeviceName();
   }
 
   public changeColor(color: string): void {
     const ip = this.device.IP;
+    this.rgbColor = color;
     const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
-    this.ledColorService.setColor(proxyBaseUrl, this.rgbStringToColorDuties(color));
+    this.updateLeds(proxyBaseUrl);
   }
 
+  // TODO: remember current color and white, and modify/refactor this.rgbStringToColorDuties() to use both values
   public changeWhite(color: string): void {
     const intensityAsHex = color.substr(1, 2 );
     const intensity8Bit = parseInt(String(Number(`0x${intensityAsHex}`)), 10);
@@ -50,7 +43,12 @@ export class RgbwColorSelectorComponent implements OnInit {
     console.log(intensity10Bit);
   }
 
-  private rgbStringToColorDuties(rgbColors: string): ColorDuties {
+  private updateLeds(proxyBaseUrl: string): void {
+    this.device.duties = this.updateDeviceDutiesFromWebPage();
+    this.ledColorService.setColor(proxyBaseUrl, this.device.duties);
+  }
+
+  private updateDeviceDutiesFromWebPage(): ColorDuties {
 
     const colors = new class implements ColorDuties {
       Blue!: number;
@@ -65,7 +63,7 @@ export class RgbwColorSelectorComponent implements OnInit {
     colors.White = 0;
     colors.UltraViolet = 0;
 
-    const hsva = this.cpService.stringToHsva(rgbColors);
+    const hsva = this.cpService.stringToHsva(this.rgbColor);
     if (hsva) {
       const rgba = this.cpService.hsvaToRgba(hsva);
       colors.Red = Math.round(rgba.r * 1023);
@@ -86,22 +84,31 @@ export class RgbwColorSelectorComponent implements OnInit {
     }
   }
 
-  private scale10bitTo8bit(): void {
+  private initFromLedDuties(): void {
     if (this.device.duties)
     {
+      const scaledColors = new class implements ColorDuties {
+        Red!: number;
+        Green!: number;
+        Blue!: number;
+        White!: number;
+        UltraViolet!: number;
+      }();
+
       /* tslint:disable:no-bitwise */
-      this.scaledColors.Red = this.device.duties.Red >> 2;
-      this.scaledColors.Green = this.device.duties.Green >> 2;
-      this.scaledColors.Blue = this.device.duties.Blue >> 2;
-      this.scaledColors.White = this.device.duties.White >> 2;
-      this.scaledColors.UltraViolet = this.device.duties.UltraViolet >> 2;
+      scaledColors.Red = this.device.duties.Red >> 2;
+      scaledColors.Green = this.device.duties.Green >> 2;
+      scaledColors.Blue = this.device.duties.Blue >> 2;
+      scaledColors.White = this.device.duties.White >> 2;
+      scaledColors.UltraViolet = this.device.duties.UltraViolet >> 2;
       /* tslint:enable:no-bitwise */
 
-      this.rgbColor = this.colorToHexRgb(this.scaledColors);
+      this.rgbColor = this.colorToHexRgb(scaledColors);
     }
   }
 
   private colorToHexRgb(color: ColorDuties): string {
+      console.log(color);
       const r = Math.round(color.Red).toString(16).padStart(2, '0');
       const g = Math.round(color.Green).toString(16).padStart(2, '0');
       const b = Math.round(color.Blue).toString(16).padStart(2, '0');

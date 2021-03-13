@@ -1,10 +1,10 @@
 <p>🌈 {{deviceName}}</p>
 <ul *ngIf="device.duties">
-  <li><span class="itemLabel">Red: </span>{{scaledColors.Red}}</li>
-  <li><span class="itemLabel">Green: </span>{{scaledColors.Green}}</li>
-  <li><span class="itemLabel">Blue: </span>{{scaledColors.Blue}}</li>
-  <li><span class="itemLabel">White: </span>{{scaledColors.White}}</li>
-  <li><span class="itemLabel">Ultra Violet: </span>{{scaledColors.UltraViolet}}</li>
+  <li><span class="itemLabel">Red: </span>{{device.duties.Red}}</li>
+  <li><span class="itemLabel">Green: </span>{{device.duties.Green}}</li>
+  <li><span class="itemLabel">Blue: </span>{{device.duties.Blue}}</li>
+  <li><span class="itemLabel">White: </span>{{device.duties.White}}</li>
+  <li><span class="itemLabel">Ultra Violet: </span>{{device.duties.UltraViolet}}</li>
 </ul>
 <input
   [style.background]="rgbColor"
