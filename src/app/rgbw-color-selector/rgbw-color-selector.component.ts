@@ -29,21 +29,20 @@ export class RgbwColorSelectorComponent implements OnInit {
   }
 
   public changeColor(color: string): void {
-    const ip = this.device.IP;
     this.rgbColor = color;
-    const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
-    this.updateLeds(proxyBaseUrl);
+    this.updateLeds();
   }
 
   // TODO: remember current color and white, and modify/refactor this.rgbStringToColorDuties() to use both values
   public changeWhite(color: string): void {
-    const intensityAsHex = color.substr(1, 2 );
-    const intensity8Bit = parseInt(String(Number(`0x${intensityAsHex}`)), 10);
-    const intensity10Bit = intensity8Bit * 4;
-    console.log(intensity10Bit);
+    this.whiteIntensity = color;
+    this.updateLeds();
   }
 
-  private updateLeds(proxyBaseUrl: string): void {
+  private updateLeds(): void {
+    const ip = this.device.IP;
+    const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
+
     this.device.duties = this.updateDeviceDutiesFromWebPage();
     this.ledColorService.setColor(proxyBaseUrl, this.device.duties);
   }
@@ -71,6 +70,9 @@ export class RgbwColorSelectorComponent implements OnInit {
       colors.Blue = Math.round(rgba.b * 1023);
     }
 
+    const whiteAsHex = this.whiteIntensity.substr(1, 2 );
+    const white8Bit = parseInt(String(Number(`0x${whiteAsHex}`)), 10);
+    colors.White = white8Bit * 4;
     return colors;
   }
 
