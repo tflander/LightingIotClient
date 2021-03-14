@@ -117,6 +117,6 @@ export class RgbwColorSelectorComponent implements OnInit {
       const r = Math.round(color.Red).toString(16).padStart(2, '0');
       const g = Math.round(color.Green).toString(16).padStart(2, '0');
       const b = Math.round(color.Blue).toString(16).padStart(2, '0');
-      return '#' + r + g + b;
+      return `#${r}${g}${b}`;
   }
 }
