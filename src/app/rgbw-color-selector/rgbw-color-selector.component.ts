@@ -106,6 +106,9 @@ export class RgbwColorSelectorComponent implements OnInit {
       /* tslint:enable:no-bitwise */
 
       this.rgbColor = this.colorToHexRgb(scaledColors);
+
+      const white8bitHex = (this.device.duties.White >> 2).toString(15).padStart(2, '0');
+      this.whiteIntensity = `#${white8bitHex}${white8bitHex}${white8bitHex}`;
     }
   }
 
