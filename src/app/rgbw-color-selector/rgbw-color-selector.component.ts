@@ -3,6 +3,8 @@ import { ColorPickerService, Cmyk } from 'ngx-color-picker';
 import { DeviceInfo} from '../device-info';
 import {ColorDuties} from '../colorDuties';
 import {LedColorService} from '../led-color.service';
+import {MessageService} from '../message.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-rgbw-color-selector',
@@ -17,11 +19,15 @@ export class RgbwColorSelectorComponent implements OnInit {
   public rgbColor = 'undefined';
   public whiteIntensity = '#000';
   public deviceName = 'Unknown Device';
+  public ledColorService: LedColorService;
 
   constructor(
-    public ledColorService: LedColorService,
-    private cpService: ColorPickerService
-  ) {}
+    private cpService: ColorPickerService,
+    private messageService: MessageService,
+    private httpClient: HttpClient
+  ) {
+    this.ledColorService = new LedColorService(messageService, httpClient);
+  }
 
   ngOnInit(): void {
     this.initFromLedDuties();
