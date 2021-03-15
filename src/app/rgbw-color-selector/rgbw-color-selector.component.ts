@@ -33,7 +33,6 @@ export class RgbwColorSelectorComponent implements OnInit {
     this.updateLeds();
   }
 
-  // TODO: remember current color and white, and modify/refactor this.rgbStringToColorDuties() to use both values
   public changeWhite(color: string): void {
     this.whiteIntensity = color;
     this.updateLeds();
