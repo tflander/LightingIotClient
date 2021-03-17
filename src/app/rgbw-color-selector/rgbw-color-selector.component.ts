@@ -5,6 +5,8 @@ import {ColorDuties} from '../colorDuties';
 import {LedColorService} from '../led-color.service';
 import {MessageService} from '../message.service';
 import {HttpClient} from '@angular/common/http';
+import {Observable, Subject} from 'rxjs';
+import {debounce, debounceTime, map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-rgbw-color-selector',
@@ -21,6 +23,9 @@ export class RgbwColorSelectorComponent implements OnInit {
   public deviceName = 'Unknown Device';
   public ledColorService: LedColorService;
 
+  results$: Observable<any> | undefined;
+  subject = new Subject();
+
   constructor(
     private cpService: ColorPickerService,
     private messageService: MessageService,
@@ -32,16 +37,22 @@ export class RgbwColorSelectorComponent implements OnInit {
   ngOnInit(): void {
     this.initFromLedDuties();
     this.resolveDeviceName();
+
+    this.results$ = this.subject.pipe(
+      debounceTime(300),
+      map(_ => this.updateLeds())
+    );
+
   }
 
   public changeColor(color: string): void {
     this.rgbColor = color;
-    this.updateLeds();
+    this.subject.next(`rgb: ${this.rgbColor}`);
   }
 
   public changeWhite(color: string): void {
     this.whiteIntensity = color;
-    this.updateLeds();
+    this.subject.next(`white: ${this.whiteIntensity}`);
   }
 
   private updateLeds(): void {
@@ -49,7 +60,19 @@ export class RgbwColorSelectorComponent implements OnInit {
     const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
 
     this.device.duties = this.updateDeviceDutiesFromWebPage();
-    this.ledColorService.setColor(proxyBaseUrl, this.device.duties);
+
+    const url = `${proxyBaseUrl}/colors`;
+    const colors = this.device.duties;
+    const body = '{' +
+      `\t"Red": ${colors.Red}\n` +
+      `\t"Green": ${colors.Green}\n` +
+      `\t"Blue": ${colors.Blue}\n` +
+      `\t"White": ${colors.White}\n` +
+      '}';
+
+    this.httpClient.put<any>(url, body)
+      .subscribe(data => console.log(data));
+
   }
 
   private updateDeviceDutiesFromWebPage(): ColorDuties {
