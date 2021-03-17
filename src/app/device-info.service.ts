@@ -18,7 +18,7 @@ export class DeviceInfoService {
     private http: HttpClient,
   ) {
     this.deviceUrls = [];
-    for (let i = 0; i <= 20; i++) {
+    for (let i = 2; i <= 20; i++) {
       this.deviceUrls.push(`/device${i}/info`);
     }
   }
