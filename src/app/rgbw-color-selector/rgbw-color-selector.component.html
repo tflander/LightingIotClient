@@ -10,17 +10,23 @@
   [style.background]="rgbColor"
   [cpAlphaChannel]="'disabled'"
   [(colorPicker)]="rgbColor"
+  [cpDialogDisplay]="'inline'"
+  [cpCancelButton]="true"
+  [cpToggle]="true"
   [cpPresetColors]="['#00f', '#0f0', '#0ff', '#f00', '#f0f', '#ff0']"
   (colorPickerChange)="changeColor($event)"
 />
 <input
   [(colorPicker)]="whiteIntensity"
+  [cpDialogDisplay]="'inline'"
+  [cpCancelButton]="true"
+  [cpToggle]="true"
   [cpColorMode]="'grayscale'"
   [cpAlphaChannel]="'disabled'"
   [style.background]="whiteIntensity"
   (colorPickerChange)="changeWhite($event)"
 />
 
-<div class="search-result" *ngFor="let result of results$ | async">
+<div class="enableObservables" *ngFor="let result of results$ | async">
 
 
