@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { ColorPickerService, Cmyk } from 'ngx-color-picker';
-import { DeviceInfo} from '../device-info';
+import {ColorPickerService} from 'ngx-color-picker';
+import {DeviceInfo} from '../device-info';
 import {ColorDuties} from '../colorDuties';
-import {MessageService} from '../message.service';
+import {MessageService, MessageSeverity} from '../message.service';
 import {HttpClient} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import {debounceTime, map} from 'rxjs/operators';
@@ -66,19 +66,20 @@ export class RgbwColorSelectorComponent implements OnInit {
       `\t"White": ${colors.White}\n` +
       '}';
 
-    // const b = { title: 'Angular PUT Request Example' };
     this.httpClient.put<any>(url, body)
       .subscribe({
         next: data => {
-          console.log(data);
+          this.messageService.add(MessageSeverity.Info, `color set to ${JSON.stringify(data)}`);
         },
         error: err => {
-          console.error('There was an error!', err);
+          console.error(err.status);
+          let msg = JSON.stringify(err);
+          if(err.status === 0) {
+            msg = `Unable to contact device at proxy url ${proxyBaseUrl}. Try refreshing the page.`;
+          }
+          this.messageService.add(MessageSeverity.Error, msg);
         }
       });
-
-//    this.httpClient.put<any>(url, body)
-
   }
 
   private updateDeviceDutiesFromWebPage(): ColorDuties {
