@@ -5,7 +5,7 @@
     [cpAlphaChannel]="'disabled'"
     [(colorPicker)]="rgbColor"
     [cpDialogDisplay]="'inline'"
-    [cpCancelButton]="true"
+    [cpDisableInput]="true"
     [cpToggle]="true"
     [cpPresetColors]="['#00f', '#0f0', '#0ff', '#f00', '#f0f', '#ff0']"
     (colorPickerChange)="changeColor($event)"
@@ -13,10 +13,10 @@
   <input
     [(colorPicker)]="whiteIntensity"
     [cpDialogDisplay]="'inline'"
-    [cpCancelButton]="true"
     [cpToggle]="true"
     [cpColorMode]="'grayscale'"
     [cpAlphaChannel]="'disabled'"
+    [cpDisableInput]="true"
     [cpPresetColors]="['#000', '#333', '#666', '#999', '#ccc', '#fff']"
     (colorPickerChange)="changeWhite($event)"
   />
