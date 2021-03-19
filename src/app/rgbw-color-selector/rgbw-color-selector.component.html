@@ -1,10 +1,4 @@
 <p>🌈 {{deviceName}}</p>
-<ul *ngIf="device.duties">
-  <li><span class="itemLabel">Red: </span>{{device.duties.Red}}</li>
-  <li><span class="itemLabel">Green: </span>{{device.duties.Green}}</li>
-  <li><span class="itemLabel">Blue: </span>{{device.duties.Blue}}</li>
-  <li><span class="itemLabel">White: </span>{{device.duties.White}}</li>
-</ul>
 <div class = "rgbwControls">
 
   <input
@@ -23,9 +17,10 @@
     [cpToggle]="true"
     [cpColorMode]="'grayscale'"
     [cpAlphaChannel]="'disabled'"
+    [cpPresetColors]="['#000', '#333', '#666', '#999', '#ccc', '#fff']"
     (colorPickerChange)="changeWhite($event)"
   />
 </div>
-<div class="enableObservables" *ngFor="let result of results$ | async">
+<div class="enableObservables" *ngFor="let result of results$ | async" ></div>
 
 
