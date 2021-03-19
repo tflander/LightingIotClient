@@ -2,11 +2,10 @@ import {Component, Input, OnInit} from '@angular/core';
 import { ColorPickerService, Cmyk } from 'ngx-color-picker';
 import { DeviceInfo} from '../device-info';
 import {ColorDuties} from '../colorDuties';
-import {LedColorService} from '../led-color.service';
 import {MessageService} from '../message.service';
 import {HttpClient} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
-import {debounce, debounceTime, map} from 'rxjs/operators';
+import {debounceTime, map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-rgbw-color-selector',
@@ -21,7 +20,6 @@ export class RgbwColorSelectorComponent implements OnInit {
   public rgbColor = 'undefined';
   public whiteIntensity = '#000';
   public deviceName = 'Unknown Device';
-  public ledColorService: LedColorService;
 
   results$: Observable<any> | undefined;
   subject = new Subject();
@@ -30,9 +28,7 @@ export class RgbwColorSelectorComponent implements OnInit {
     private cpService: ColorPickerService,
     private messageService: MessageService,
     private httpClient: HttpClient
-  ) {
-    this.ledColorService = new LedColorService(messageService, httpClient);
-  }
+  ) {}
 
   ngOnInit(): void {
     this.initFromLedDuties();
@@ -70,8 +66,18 @@ export class RgbwColorSelectorComponent implements OnInit {
       `\t"White": ${colors.White}\n` +
       '}';
 
+    // const b = { title: 'Angular PUT Request Example' };
     this.httpClient.put<any>(url, body)
-      .subscribe(data => console.log(data));
+      .subscribe({
+        next: data => {
+          console.log(data);
+        },
+        error: err => {
+          console.error('There was an error!', err);
+        }
+      });
+
+//    this.httpClient.put<any>(url, body)
 
   }
 
