@@ -5,29 +5,27 @@
   <li><span class="itemLabel">Blue: </span>{{device.duties.Blue}}</li>
   <li><span class="itemLabel">White: </span>{{device.duties.White}}</li>
 </ul>
-<input
-  [style.background]="'inherit'"
-  [style.border]="'none'"
-  [cpAlphaChannel]="'disabled'"
-  [(colorPicker)]="rgbColor"
-  [cpDialogDisplay]="'inline'"
-  [cpCancelButton]="true"
-  [cpToggle]="true"
-  [cpPresetColors]="['#00f', '#0f0', '#0ff', '#f00', '#f0f', '#ff0']"
-  (colorPickerChange)="changeColor($event)"
-/>
-<input
-  [(colorPicker)]="whiteIntensity"
-  [cpDialogDisplay]="'inline'"
-  [cpCancelButton]="true"
-  [cpToggle]="true"
-  [cpColorMode]="'grayscale'"
-  [cpAlphaChannel]="'disabled'"
-  [style.background]="'inherit'"
-  [style.border]="'none'"
-  (colorPickerChange)="changeWhite($event)"
-/>
+<div class = "rgbwControls">
 
+  <input
+    [cpAlphaChannel]="'disabled'"
+    [(colorPicker)]="rgbColor"
+    [cpDialogDisplay]="'inline'"
+    [cpCancelButton]="true"
+    [cpToggle]="true"
+    [cpPresetColors]="['#00f', '#0f0', '#0ff', '#f00', '#f0f', '#ff0']"
+    (colorPickerChange)="changeColor($event)"
+  />
+  <input
+    [(colorPicker)]="whiteIntensity"
+    [cpDialogDisplay]="'inline'"
+    [cpCancelButton]="true"
+    [cpToggle]="true"
+    [cpColorMode]="'grayscale'"
+    [cpAlphaChannel]="'disabled'"
+    (colorPickerChange)="changeWhite($event)"
+  />
+</div>
 <div class="enableObservables" *ngFor="let result of results$ | async">
 
 
