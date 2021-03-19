@@ -4,10 +4,10 @@
   <li><span class="itemLabel">Green: </span>{{device.duties.Green}}</li>
   <li><span class="itemLabel">Blue: </span>{{device.duties.Blue}}</li>
   <li><span class="itemLabel">White: </span>{{device.duties.White}}</li>
-  <li><span class="itemLabel">Ultra Violet: </span>{{device.duties.UltraViolet}}</li>
 </ul>
 <input
-  [style.background]="rgbColor"
+  [style.background]="'inherit'"
+  [style.border]="'none'"
   [cpAlphaChannel]="'disabled'"
   [(colorPicker)]="rgbColor"
   [cpDialogDisplay]="'inline'"
@@ -23,7 +23,8 @@
   [cpToggle]="true"
   [cpColorMode]="'grayscale'"
   [cpAlphaChannel]="'disabled'"
-  [style.background]="whiteIntensity"
+  [style.background]="'inherit'"
+  [style.border]="'none'"
   (colorPickerChange)="changeWhite($event)"
 />
 
