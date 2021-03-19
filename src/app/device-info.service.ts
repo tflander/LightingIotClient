@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {DeviceInfo} from './device-info';
 import {DEVICES} from './MockDevices';
 import {Observable, of} from 'rxjs';
-import {MessageService} from './message.service';
+import {MessageService, MessageSeverity} from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -29,7 +29,7 @@ export class DeviceInfoService {
     this.deviceUrls.forEach(url => devices$.push(
       this.http.get<DeviceInfo>(url)
         .pipe(
-          tap(_ => this.log(`found device at url ${url}`)),
+          tap(_ => this.log(MessageSeverity.Info, `found device at url ${url}`)),
           catchError(this.handleError<DeviceInfo>('getDeviceInfo', undefined))
     )));
 
@@ -38,12 +38,12 @@ export class DeviceInfoService {
 
   private handleError<T>(operation = 'operation', result?: T): (error: any) => Observable<T> {
     return (error: any): Observable<T> => {
-      this.log(`${operation} failed: ${error.message}`);
+      this.log(MessageSeverity.Error, `${operation} failed: ${error.message}`);
       return of(result as T);
     };
   }
 
-  private log(message: string): void {
-    this.messageService.add(`DeviceInfoService: ${message}`);
+  private log(severity: MessageSeverity, message: string): void {
+    this.messageService.add( severity, `DeviceInfoService: ${message}`);
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {MessageService} from './message.service';
+import {MessageService, MessageSeverity} from './message.service';
 import {HttpClient} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {ColorDuties} from './colorDuties';
@@ -31,13 +31,13 @@ export class LedColorService {
 
   private handleError<T>(operation = 'operation', result?: T): (error: any) => Observable<T> {
     return (error: any): Observable<T> => {
-      this.log(`${operation} failed: ${error.message}`);
+      this.log(MessageSeverity.Error, `${operation} failed: ${error.message}`);
       return of(result as T);
     };
   }
 
-  private log(message: string): void {
-    this.messageService.add(`LedColorService: ${message}`);
+  private log(severity: MessageSeverity, message: string): void {
+    this.messageService.add(severity, `LedColorService: ${message}`);
   }
 
 }
