@@ -20,6 +20,10 @@ export class DeviceInfoComponent implements OnInit {
     }));
   }
 
+  refresh(): void {
+    window.location.reload();
+  }
+
   constructor(private deviceInfoService: DeviceInfoService) {}
   ngOnInit(): void {
     this.getDevices();
