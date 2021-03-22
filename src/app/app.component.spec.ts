@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content').textContent).toContain('Testing...1...2...3');
+    expect(compiled.querySelector('.content').textContent).toContain('IoT Device Scanner');
   });
 });
