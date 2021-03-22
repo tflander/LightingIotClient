@@ -1,4 +1,4 @@
-import {ColorDuties} from './colorDuties';
+import {IColorDuties} from './colorDuties';
 
 export interface DeviceInfo {
   MacAddress: string;
@@ -6,5 +6,5 @@ export interface DeviceInfo {
   Program: string;
   ProgramVersion: string;
   Unused?: string;
-  duties?: ColorDuties;
+  duties?: IColorDuties;
 }

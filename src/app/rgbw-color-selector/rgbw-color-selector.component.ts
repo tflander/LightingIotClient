@@ -1,11 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ColorPickerService} from 'ngx-color-picker';
 import {DeviceInfo} from '../device-info';
-import {ColorDuties} from '../colorDuties';
+import {IColorDuties} from '../colorDuties';
 import {MessageService, MessageSeverity} from '../message.service';
 import {HttpClient} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import {debounceTime, map} from 'rxjs/operators';
+import {RgbToDutiesService} from '../rgb-to-duties.service';
 
 @Component({
   selector: 'app-rgbw-color-selector',
@@ -27,7 +28,8 @@ export class RgbwColorSelectorComponent implements OnInit {
   constructor(
     private cpService: ColorPickerService,
     private messageService: MessageService,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private rgbToDuties: RgbToDutiesService
   ) {}
 
   ngOnInit(): void {
@@ -44,6 +46,7 @@ export class RgbwColorSelectorComponent implements OnInit {
   public changeColor(color: string): void {
     this.rgbColor = color;
     this.subject.next(`rgb: ${this.rgbColor}`);
+    this.rgbToDuties.dutiesFrom(this.rgbColor);
   }
 
   public changeWhite(color: string): void {
@@ -82,9 +85,9 @@ export class RgbwColorSelectorComponent implements OnInit {
       });
   }
 
-  private updateDeviceDutiesFromWebPage(): ColorDuties {
+  private updateDeviceDutiesFromWebPage(): IColorDuties {
 
-    const colors = new class implements ColorDuties {
+    const colors = new class implements IColorDuties {
       Blue!: number;
       Green!: number;
       Red!: number;
@@ -124,7 +127,7 @@ export class RgbwColorSelectorComponent implements OnInit {
   private initFromLedDuties(): void {
     if (this.device.duties)
     {
-      const scaledColors = new class implements ColorDuties {
+      const scaledColors = new class implements IColorDuties {
         Red!: number;
         Green!: number;
         Blue!: number;
@@ -147,7 +150,7 @@ export class RgbwColorSelectorComponent implements OnInit {
     }
   }
 
-  private colorToHexRgb(color: ColorDuties): string {
+  private colorToHexRgb(color: IColorDuties): string {
       console.log(color);
       const r = Math.round(color.Red).toString(16).padStart(2, '0');
       const g = Math.round(color.Green).toString(16).padStart(2, '0');
