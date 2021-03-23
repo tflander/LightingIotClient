@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {ColorPickerService} from 'ngx-color-picker';
-import {IColorDuties} from './colorDuties';
+import {ColorDuties, IColorDuties} from './colorDuties';
 
 @Injectable({
   providedIn: 'root'
@@ -9,23 +9,23 @@ export class RgbToDutiesService {
 
   constructor(private cpService: ColorPickerService) { }
 
-  public dutiesFrom(rgb: string): {} {
+  public dutiesFrom(rgb: string): IColorDuties {
 
-    const duties: {} = {
-      Red: 0,
-      Green: 0,
-      Blue: 0,
-      White: 0
-    };
+    const duties = new ColorDuties();
+
     const hsva = this.cpService.stringToHsva(rgb);
     if (hsva) {
       const rgba = this.cpService.hsvaToRgba(hsva);
       console.log(rgba);
-//      let red = rgba.r;
-      let white = 0;
+      duties.Red = Math.round(rgba.r * 1023);
+      duties.Green = Math.round(rgba.g * 1023);
+      duties.Blue = Math.round(rgba.b * 1023);
+
+      /*
       if (rgb === '#ffffff') {
-        white = 1023;
+        duties.White = 1023;
       }
+       */
     }
 
     return duties;

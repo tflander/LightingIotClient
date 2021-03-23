@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import {ColorPickerService} from 'ngx-color-picker';
 import { RgbToDutiesService } from './rgb-to-duties.service';
+import {ColorDuties} from './colorDuties';
 
 describe('RgbToDutiesService', () => {
   let service: RgbToDutiesService;
@@ -17,36 +18,52 @@ describe('RgbToDutiesService', () => {
   });
 
   it('generates black', () => {
-    expect(service.dutiesFrom('#000000')).toEqual(
-      {
-        Red: 0,
-        Green: 0,
-        Blue: 0,
-        White: 0
-      }
-      );
+    expect(service.dutiesFrom('#000000')).toEqual(new ColorDuties());
   });
 
   it('generates pure white', () => {
-    expect(service.dutiesFrom('#ffffff')).toEqual(
-      {
-        Red: 0,
-        Green: 0,
-        Blue: 0,
-        White: 1023
-      }
-    );
+    const expectedDuties = new ColorDuties();
+    expectedDuties.White = 1023;
+    expect(service.dutiesFrom('#ffffff')).toEqual(new ColorDuties());
   });
 
   it('generates pure red', () => {
-    expect(service.dutiesFrom('#ff0000')).toEqual(
-      {
-        Red: 1023,
-        Green: 0,
-        Blue: 0,
-        White: 0
-      }
-    );
+    const expectedDuties = new ColorDuties();
+    expectedDuties.Red = 1023;
+    expect(service.dutiesFrom('#ff0000')).toEqual(expectedDuties);
+  });
+
+  it('generates pure green', () => {
+    const expectedDuties = new ColorDuties();
+    expectedDuties.Green = 1023;
+    expect(service.dutiesFrom('#00ff00')).toEqual(expectedDuties);
+  });
+
+  it('generates pure blue', () => {
+    const expectedDuties = new ColorDuties();
+    expectedDuties.Blue = 1023;
+    expect(service.dutiesFrom('#0000ff')).toEqual(expectedDuties);
+  });
+
+  it('generates pure magenta', () => {
+    const expectedDuties = new ColorDuties();
+    expectedDuties.Blue = 1023;
+    expectedDuties.Red = 1023;
+    expect(service.dutiesFrom('#ff00ff')).toEqual(expectedDuties);
+  });
+
+  it('generates pure cyan', () => {
+    const expectedDuties = new ColorDuties();
+    expectedDuties.Blue = 1023;
+    expectedDuties.Green = 1023;
+    expect(service.dutiesFrom('#00ffff')).toEqual(expectedDuties);
+  });
+
+  it('generates pure yellow', () => {
+    const expectedDuties = new ColorDuties();
+    expectedDuties.Green = 1023;
+    expectedDuties.Red = 1023;
+    expect(service.dutiesFrom('#ffff00')).toEqual(expectedDuties);
   });
 
 });
