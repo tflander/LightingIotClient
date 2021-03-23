@@ -46,7 +46,6 @@ export class RgbwColorSelectorComponent implements OnInit {
   public changeColor(color: string): void {
     this.rgbColor = color;
     this.subject.next(`rgb: ${this.rgbColor}`);
-    this.rgbToDuties.dutiesFrom(this.rgbColor);
   }
 
   public changeWhite(color: string): void {
@@ -58,7 +57,7 @@ export class RgbwColorSelectorComponent implements OnInit {
     const ip = this.device.IP;
     const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
 
-    this.device.duties = this.updateDeviceDutiesFromWebPage();
+    this.device.duties = this.rgbToDuties.dutiesFrom(this.rgbColor);
 
     const url = `${proxyBaseUrl}/colors`;
     const colors = this.device.duties;
@@ -83,35 +82,6 @@ export class RgbwColorSelectorComponent implements OnInit {
           this.messageService.add(MessageSeverity.Error, msg);
         }
       });
-  }
-
-  private updateDeviceDutiesFromWebPage(): IColorDuties {
-
-    const colors = new class implements IColorDuties {
-      Blue!: number;
-      Green!: number;
-      Red!: number;
-      UltraViolet!: number;
-      White!: number;
-    }();
-    colors.Red = 0;
-    colors.Blue = 0;
-    colors.Green = 0;
-    colors.White = 0;
-    colors.UltraViolet = 0;
-
-    const hsva = this.cpService.stringToHsva(this.rgbColor);
-    if (hsva) {
-      const rgba = this.cpService.hsvaToRgba(hsva);
-      colors.Red = Math.round(rgba.r * 1023);
-      colors.Green = Math.round(rgba.g * 1023);
-      colors.Blue = Math.round(rgba.b * 1023);
-    }
-
-    const whiteAsHex = this.whiteIntensity.substr(1, 2 );
-    const white8Bit = parseInt(String(Number(`0x${whiteAsHex}`)), 10);
-    colors.White = white8Bit * 4;
-    return colors;
   }
 
   private resolveDeviceName(): void {
