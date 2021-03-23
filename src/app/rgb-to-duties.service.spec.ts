@@ -26,6 +26,9 @@ describe('RgbToDutiesService', () => {
     { desc: 'med cyan',        rgb: '#007F7F', expected: {Green: 509, Blue: 509} },
     { desc: 'med magenta',     rgb: '#7F007F', expected: {Red: 509, Blue: 509} },
     { desc: 'med yellow',      rgb: '#7F7F00', expected: {Red: 509, Green: 509} },
+    { desc: 'dim cyan',        rgb: '#000101', expected: {Green: 4, Blue: 4} },
+    { desc: 'dim magenta',     rgb: '#010001', expected: {Red: 4, Blue: 4} },
+    { desc: 'dim yellow',      rgb: '#010100', expected: {Red: 4, Green: 4} },
   ];
 
   describe('dutiesFrom(rgb)',  () => {
