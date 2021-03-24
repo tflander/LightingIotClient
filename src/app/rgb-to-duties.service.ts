@@ -9,6 +9,15 @@ export class RgbToDutiesService {
 
   constructor(private cpService: ColorPickerService) { }
 
+  public colorToHexRgb(color: IColorDuties): string {
+    console.log(color);
+    const w = Math.round(color.White);
+    const r = Math.round(w + color.Red).toString(16).padStart(2, '0');
+    const g = Math.round(w + color.Green).toString(16).padStart(2, '0');
+    const b = Math.round(w + color.Blue).toString(16).padStart(2, '0');
+    return `#${r}${g}${b}`;
+  }
+
   public dutiesFrom(rgb: string): IColorDuties {
 
     const duties = new ColorDuties();

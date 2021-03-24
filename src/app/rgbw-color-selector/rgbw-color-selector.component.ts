@@ -107,16 +107,7 @@ export class RgbwColorSelectorComponent implements OnInit {
       scaledColors.UltraViolet = this.device.duties.UltraViolet >> 2;
       /* tslint:enable:no-bitwise */
 
-      this.rgbColor = this.colorToHexRgb(scaledColors);
+      this.rgbColor = this.rgbToDuties.colorToHexRgb(scaledColors);
     }
-  }
-
-  // TODO: move to service and adjust white
-  private colorToHexRgb(color: IColorDuties): string {
-      console.log(color);
-      const r = Math.round(color.Red).toString(16).padStart(2, '0');
-      const g = Math.round(color.Green).toString(16).padStart(2, '0');
-      const b = Math.round(color.Blue).toString(16).padStart(2, '0');
-      return `#${r}${g}${b}`;
   }
 }
