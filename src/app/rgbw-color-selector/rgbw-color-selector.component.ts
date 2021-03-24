@@ -19,7 +19,6 @@ export class RgbwColorSelectorComponent implements OnInit {
   device!: DeviceInfo;
 
   public rgbColor = 'undefined';
-  public whiteIntensity = '#000';
   public deviceName = 'Unknown Device';
 
   results$: Observable<any> | undefined;
@@ -48,11 +47,6 @@ export class RgbwColorSelectorComponent implements OnInit {
     this.subject.next(`rgb: ${this.rgbColor}`);
   }
 
-  public changeWhite(color: string): void {
-    this.whiteIntensity = color;
-    this.subject.next(`white: ${this.whiteIntensity}`);
-  }
-
   private updateLeds(): void {
     const ip = this.device.IP;
     const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
@@ -76,7 +70,7 @@ export class RgbwColorSelectorComponent implements OnInit {
         error: err => {
           console.error(err.status);
           let msg = JSON.stringify(err);
-          if(err.status === 0) {
+          if (err.status === 0) {
             msg = `Unable to contact device at proxy url ${proxyBaseUrl}. Try refreshing the page.`;
           }
           this.messageService.add(MessageSeverity.Error, msg);
@@ -114,12 +108,10 @@ export class RgbwColorSelectorComponent implements OnInit {
       /* tslint:enable:no-bitwise */
 
       this.rgbColor = this.colorToHexRgb(scaledColors);
-
-      const white8bitHex = (this.device.duties.White >> 2).toString(15).padStart(2, '0');
-      this.whiteIntensity = `#${white8bitHex}${white8bitHex}${white8bitHex}`;
     }
   }
 
+  // TODO: move to service and adjust white
   private colorToHexRgb(color: IColorDuties): string {
       console.log(color);
       const r = Math.round(color.Red).toString(16).padStart(2, '0');

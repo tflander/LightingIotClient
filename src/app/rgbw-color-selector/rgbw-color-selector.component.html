@@ -7,18 +7,8 @@
     [cpDialogDisplay]="'inline'"
     [cpDisableInput]="true"
     [cpToggle]="true"
-    [cpPresetColors]="['#00f', '#0f0', '#0ff', '#f00', '#f0f', '#ff0']"
+    [cpPresetColors]="['#00f', '#0f0', '#0ff', '#f00', '#f0f', '#ff0', '#000', '#333', '#666', '#999', '#ccc', '#fff']"
     (colorPickerChange)="changeColor($event)"
-  />
-  <input
-    [(colorPicker)]="whiteIntensity"
-    [cpDialogDisplay]="'inline'"
-    [cpToggle]="true"
-    [cpColorMode]="'grayscale'"
-    [cpAlphaChannel]="'disabled'"
-    [cpDisableInput]="true"
-    [cpPresetColors]="['#000', '#333', '#666', '#999', '#ccc', '#fff']"
-    (colorPickerChange)="changeWhite($event)"
   />
 </div>
 <div class="enableObservables" *ngFor="let result of results$ | async" ></div>
