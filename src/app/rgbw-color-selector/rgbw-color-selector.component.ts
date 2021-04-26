@@ -52,15 +52,8 @@ export class RgbwColorSelectorComponent implements OnInit {
     const proxyBaseUrl = `/device${ip.substr(ip.lastIndexOf('.') + 1)}`;
 
     this.device.duties = this.rgbToDuties.dutiesFrom(this.rgbColor);
-
-    const url = `${proxyBaseUrl}/colors`;
-    const colors = this.device.duties;
-    const body = '{' +
-      `\t"Red": ${colors.Red}\n` +
-      `\t"Green": ${colors.Green}\n` +
-      `\t"Blue": ${colors.Blue}\n` +
-      `\t"White": ${colors.White}\n` +
-      '}';
+    const url = `${proxyBaseUrl}/lighting`;
+    const body = `[{"command": "setColor", "color": "${this.rgbColor}"}]`;
 
     this.httpClient.put<any>(url, body)
       .subscribe({
