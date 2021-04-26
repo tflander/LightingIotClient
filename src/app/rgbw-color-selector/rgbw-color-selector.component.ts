@@ -58,7 +58,7 @@ export class RgbwColorSelectorComponent implements OnInit {
     this.httpClient.put<any>(url, body)
       .subscribe({
         next: data => {
-          this.messageService.add(MessageSeverity.Info, `color set to ${JSON.stringify(data)}`);
+          this.messageService.add(MessageSeverity.Info, `executed ${JSON.stringify(data)}`);
         },
         error: err => {
           console.error(err.status);
