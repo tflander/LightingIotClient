@@ -5,6 +5,6 @@ export interface DeviceInfo {
   IP: string;
   Program: string;
   ProgramVersion: string;
-  Unused?: string;
+  script?: string;
   duties?: IColorDuties;
 }

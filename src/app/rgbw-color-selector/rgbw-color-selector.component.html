@@ -11,6 +11,7 @@
     (colorPickerChange)="changeColor($event)"
   />
 </div>
+<span>{{device.script}}</span>
 <div class="enableObservables" *ngFor="let result of results$ | async" ></div>
 
 
