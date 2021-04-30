@@ -53,7 +53,11 @@ export class RgbwColorSelectorComponent implements OnInit {
 
     this.device.duties = this.rgbToDuties.dutiesFrom(this.rgbColor);
     const url = `${proxyBaseUrl}/lighting`;
-    const body = `[{"command": "setColor", "color": "${this.rgbColor}"}]`;
+    const body = `{
+      "id": "x",
+      "description": "from webapp",
+      "script": ["${this.rgbColor}"]
+      }`;
 
     this.httpClient.put<any>(url, body)
       .subscribe({
